@@ -7,6 +7,7 @@ const About = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768; 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -14,8 +15,8 @@ const About = () => {
         }
       },
       {
-        threshold: 0.3, // Trigger when 30% of the section is visible
-        rootMargin: '-50px 0px -50px 0px' // Adjust trigger point
+        threshold: isMobile ? 0.1 : 0.3,
+        rootMargin: isMobile ? '0px 0px 50px 0px' : '-50px 0px -50px 0px'
       }
     );
 
