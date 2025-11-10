@@ -47,10 +47,10 @@ const Hero = () => {
   useEffect(() => {
     const d = setInterval(() => {
       setCurrentDesktop((p) => (p + 1) % desktopImages.length);
-    }, 5000); // Increased from 3000 to 5000ms for more time to appreciate each image
+    }, 2000); // Increased from 3000 to 5000ms for more time to appreciate each image
     const m = setInterval(() => {
       setCurrentMobile((p) => (p + 1) % mobileImages.length);
-    }, 5000); // Increased from 3000 to 5000ms for more time to appreciate each image
+    }, 2000); // Increased from 3000 to 5000ms for more time to appreciate each image
     return () => {
       clearInterval(d);
       clearInterval(m);
