@@ -8,6 +8,8 @@ import {
   Home,
   Users,
   FileText,
+  Sparkles,
+  ArrowRight
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -59,26 +61,26 @@ const Header = () => {
   const getActiveStyles = (path: string) => {
     const baseStyles = "pb-1 transition-all duration-300 font-medium";
     const activeStyles =
-      "text-soft-green font-semibold border-b-2 border-soft-green";
-    const inactiveStyles = "text-steel-gray hover:text-soft-green";
+      "text-[#00b140] font-semibold border-b-2 border-[#00b140]";
+    const inactiveStyles = "text-steel-gray hover:text-[#00b140]";
 
     return `${baseStyles} ${isActive(path) ? activeStyles : inactiveStyles}`;
   };
 
   // Header background styles based on scroll state
   const headerBackground = isScrolled
-    ? "bg-warm-white/95 backdrop-blur-lg shadow-2xl shadow-soft-green/20 border-b border-soft-green/30"
+    ? "bg-warm-white/95 backdrop-blur-lg shadow-2xl shadow-[#00b140]/20 border-b border-[#00b140]/30"
     : "bg-transparent shadow-none border-none";
 
   // Text and logo styles based on scroll state
   const textColor = isScrolled ? "text-steel-gray" : "text-white";
   const logoTextGradient = isScrolled
-    ? "bg-gradient-to-r from-steel-gray to-soft-green bg-clip-text text-transparent"
+    ? "bg-gradient-to-r from-steel-gray to-[#00b140] bg-clip-text text-transparent"
     : "bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent";
 
   const logoSubtextColor = isScrolled ? "text-steel-gray/70" : "text-white/80";
   const navTextColor = isScrolled ? "text-steel-gray" : "text-white";
-  const borderColor = isScrolled ? "border-soft-green/40" : "border-white/40";
+  const borderColor = isScrolled ? "border-[#00b140]/40" : "border-white/40";
 
   return (
     <header
@@ -90,22 +92,22 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3 sm:space-x-4 group">
               <div
-                className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden border-2 ${borderColor} shadow-lg group-hover:shadow-soft-green/30 transition-all duration-300 group-hover:scale-105`}
+                className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl overflow-hidden border-2 ${borderColor} shadow-lg group-hover:shadow-[#00b140]/30 transition-all duration-300 group-hover:scale-105`}
               >
                 <img
                   src={logoImage}
-                  alt="Dreieich Pflege Logo"
+                  alt="Pflegedienst Dreieich Logo"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
               <div className="hidden sm:block">
                 <span className={`text-xl sm:text-2xl font-bold ${logoTextGradient}`}>
-                  Dreieich Pflege
+               Pflegedienst Dreieich
                 </span>
                 <div
                   className={`text-xs sm:text-sm font-medium transition-colors duration-300 ${logoSubtextColor}`}
                 >
-                  Menschliche Pflege mit Herz
+                  Qualität ist kein zufall
                 </div>
               </div>
             </Link>
@@ -162,15 +164,25 @@ const Header = () => {
             </div>
             <Link to="/contact">
               <Button
-                variant="hero"
                 size="sm"
-                className={`transition-all duration-500 text-sm xl:text-base ${
+                className={`text-sm xl:text-base px-6 py-3 bg-white text-[#00b140] hover:bg-[#00b140] hover:text-white font-semibold border-2 border-[#00b140] transition-all duration-300 shadow-lg group/btn relative overflow-hidden hover:shadow-xl hover:border-[#00b140] ${
                   isScrolled
-                    ? "bg-soft-green text-white hover:bg-soft-green/90 shadow-lg"
-                    : "bg-white/20 backdrop-blur-md text-white border-2 border-white/40 hover:bg-white/30 hover:border-white/60"
+                    ? ""
+                    : "bg-white/20 backdrop-blur-md text-white border-2 border-white/40 hover:bg-[#00b140] hover:border-[#00b140]"
                 }`}
               >
-                Kontaktieren Sie uns
+                {/* Animated background on hover */}
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#00b140] via-[#00a138] to-[#00b140] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></span>
+                
+                {/* Sparkle effect */}
+                <Sparkles className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />
+                <Sparkles className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300 delay-150" />
+                
+                {/* Button content */}
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Kontaktieren Sie uns
+                  <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-300 group-hover/btn:scale-110" />
+                </span>
               </Button>
             </Link>
           </div>
@@ -202,7 +214,7 @@ const Header = () => {
             
             {/* Simple Mobile Menu */}
             <div
-              className={`fixed top-16 left-0 right-0 z-50 bg-warm-white/95 backdrop-blur-lg border-b border-soft-green/20 shadow-2xl transform transition-transform duration-300 ${
+              className={`fixed top-16 left-0 right-0 z-50 bg-warm-white/95 backdrop-blur-lg border-b border-[#00b140]/20 shadow-2xl transform transition-transform duration-300 ${
                 isMenuOpen ? 'translate-y-0' : '-translate-y-full'
               }`}
             >
@@ -213,8 +225,8 @@ const Header = () => {
                     to="/"
                     className={`flex items-center space-x-3 py-4 px-4 rounded-xl transition-all duration-300 ${
                       isActive("/")
-                        ? "bg-soft-green/20 text-soft-green font-semibold"
-                        : "text-steel-gray hover:bg-soft-green/10 hover:text-soft-green"
+                        ? "bg-[#00b140]/20 text-[#00b140] font-semibold"
+                        : "text-steel-gray hover:bg-[#00b140]/10 hover:text-[#00b140]"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -225,8 +237,8 @@ const Header = () => {
                     to="/services"
                     className={`flex items-center space-x-3 py-4 px-4 rounded-xl transition-all duration-300 ${
                       isActive("/services")
-                        ? "bg-soft-green/20 text-soft-green font-semibold"
-                        : "text-steel-gray hover:bg-soft-green/10 hover:text-soft-green"
+                        ? "bg-[#00b140]/20 text-[#00b140] font-semibold"
+                        : "text-steel-gray hover:bg-[#00b140]/10 hover:text-[#00b140]"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -237,8 +249,8 @@ const Header = () => {
                     to="/about"
                     className={`flex items-center space-x-3 py-4 px-4 rounded-xl transition-all duration-300 ${
                       isActive("/about")
-                        ? "bg-soft-green/20 text-soft-green font-semibold"
-                        : "text-steel-gray hover:bg-soft-green/10 hover:text-soft-green"
+                        ? "bg-[#00b140]/20 text-[#00b140] font-semibold"
+                        : "text-steel-gray hover:bg-[#00b140]/10 hover:text-[#00b140]"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -249,8 +261,8 @@ const Header = () => {
                     to="/contact"
                     className={`flex items-center space-x-3 py-4 px-4 rounded-xl transition-all duration-300 ${
                       isActive("/contact")
-                        ? "bg-soft-green/20 text-soft-green font-semibold"
-                        : "text-steel-gray hover:bg-soft-green/10 hover:text-soft-green"
+                        ? "bg-[#00b140]/20 text-[#00b140] font-semibold"
+                        : "text-steel-gray hover:bg-[#00b140]/10 hover:text-[#00b140]"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -260,12 +272,12 @@ const Header = () => {
                 </nav>
 
                 {/* Simple Contact Info */}
-                <div className="border-t border-soft-green/20 pt-6">
+                <div className="border-t border-[#00b140]/20 pt-6">
                   <div className="flex flex-col space-y-4">
                     {/* Phone Number */}
                     <div className="flex items-center justify-center space-x-3">
-                      <div className="flex items-center space-x-2 bg-soft-green/10 px-4 py-3 rounded-lg">
-                        <Phone className="w-5 h-5 text-soft-green" />
+                      <div className="flex items-center space-x-2 bg-[#00b140]/10 px-4 py-3 rounded-lg">
+                        <Phone className="w-5 h-5 text-[#00b140]" />
                         <span className="text-lg font-semibold text-steel-gray">06103 - 802 57 31</span>
                       </div>
                     </div>
@@ -274,6 +286,29 @@ const Header = () => {
                     <div className="flex items-center justify-center space-x-2 text-steel-gray/70 text-sm">
                       <MapPin className="w-4 h-4" />
                       <span>Dreieich, Deutschland</span>
+                    </div>
+
+                    {/* Mobile CTA Button */}
+                    <div className="pt-4">
+                      <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                        <Button
+                          size="lg"
+                          className="w-full text-base py-4 bg-white text-[#00b140] hover:bg-[#00b140] hover:text-white font-semibold border-2 border-[#00b140] transition-all duration-300 shadow-lg group/btn relative overflow-hidden hover:shadow-xl hover:border-[#00b140]"
+                        >
+                          {/* Animated background on hover */}
+                          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#00b140] via-[#00a138] to-[#00b140] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></span>
+                          
+                          {/* Sparkle effect */}
+                          <Sparkles className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />
+                          <Sparkles className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300 delay-150" />
+                          
+                          {/* Button content */}
+                          <span className="relative z-10 flex items-center justify-center gap-2">
+                            Kontaktieren Sie uns
+                            <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-300 group-hover/btn:scale-110" />
+                          </span>
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>

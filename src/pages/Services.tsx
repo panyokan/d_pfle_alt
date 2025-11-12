@@ -144,20 +144,21 @@ const Services = () => {
       
       {/* Hero Section */}
       <section 
-        className="py-16 md:py-20 bg-gradient-to-br from-trust-green to-trust-green/90 text-white relative overflow-hidden" 
+        className="py-16 md:py-20 bg-gradient-to-br from-[#00b140] to-[#00b140]/90 text-white relative overflow-hidden" 
         style={{
           backgroundImage: `url(${outdoor})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center left',
           backgroundRepeat: 'no-repeat',
           minHeight: '40vh',
+          filter: 'brightness(1.1)',
         }}
       >
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/50"></div>
         
         <motion.div 
-          className="absolute inset-0 bg-trust-green/5"
+          className="absolute inset-0 bg-[#00b140]/5"
           style={{ y }}
         ></motion.div>
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10 flex items-center justify-center py-12 md:py-20">
@@ -185,12 +186,13 @@ const Services = () => {
       </section>
 
       {/* Core Services */}
-      <motion.section 
+      {/* <motion.section 
         ref={servicesRef}
         initial={{ opacity: 0 }}
         animate={isServicesInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8 }}
         className="py-12 md:py-20 bg-gradient-to-b from-background to-secondary/30"
+        style={{ filter: 'brightness(1.05)' }}
       >
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div 
@@ -203,7 +205,7 @@ const Services = () => {
               Kernpflegedienste
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
-              Unsere grundlegenden Dienstleistungen bilden die Grundlage für außergewöhnliche Seniorenpflege
+              Unsere grundlegenden Dienstleistungen bilden die Grundlage für emphatische Seniorenpflege
             </p>
           </motion.div>
           
@@ -228,7 +230,7 @@ const Services = () => {
                 <Card className="group hover:shadow-card transition-all duration-300 border-border/50 h-full bg-gradient-to-br from-white to-gray-50">
                   <CardHeader className="text-center px-4 sm:px-6 pt-6">
                     <motion.div 
-                      className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center"
+                      className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-[#00b140] rounded-full flex items-center justify-center"
                       whileHover={{ 
                         scale: 1.1,
                         rotate: 5,
@@ -256,7 +258,7 @@ const Services = () => {
                           }}
                         >
                           <motion.div 
-                            className="w-1.5 h-1.5 bg-trust-green rounded-full mt-1 flex-shrink-0"
+                            className="w-1.5 h-1.5 bg-[#00b140] rounded-full mt-1 flex-shrink-0"
                             animate={{ scale: [1, 1.2, 1] }}
                             transition={{ duration: 2, repeat: Infinity, delay: detailIndex * 0.2 }}
                           ></motion.div>
@@ -270,7 +272,7 @@ const Services = () => {
             ))}
           </div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* Specialty Services */}
       <motion.section 
@@ -279,6 +281,7 @@ const Services = () => {
         animate={isSpecialtyInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8 }}
         className="py-12 md:py-20 bg-background"
+        style={{ filter: 'brightness(1.05)' }}
       >
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div 
@@ -288,10 +291,12 @@ const Services = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4">
-              Spezialpflegeprogramme
+              Kernpflegedienste
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
-              Unsere spezialisierten Pflegeleistungen nach SGB V, XI und XII
+              {/* Unsere grundlegenden Dienstleistungen bilden die Grundlage für emphatische Seniorenpflege */}
+
+              Unsere Pflegeleistungen nach SGB V, XI und XII
             </p>
           </motion.div>
           
@@ -317,7 +322,7 @@ const Services = () => {
                   <CardHeader className="px-4 sm:px-6 pt-6">
                     <div className="flex items-center space-x-3 md:space-x-4">
                       <motion.div 
-                        className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-lg flex items-center justify-center flex-shrink-0"
+                        className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#00b140] rounded-lg flex items-center justify-center flex-shrink-0"
                         whileHover={{ 
                           scale: 1.1,
                           rotate: 5,
@@ -346,7 +351,7 @@ const Services = () => {
                           }}
                         >
                           <motion.div 
-                            className="w-1.5 h-1.5 bg-trust-green rounded-full mt-1 flex-shrink-0"
+                            className="w-1.5 h-1.5 bg-[#00b140] rounded-full mt-1 flex-shrink-0"
                             animate={{ scale: [1, 1.3, 1] }}
                             transition={{ duration: 2, repeat: Infinity, delay: featureIndex * 0.3 }}
                           ></motion.div>
@@ -369,6 +374,7 @@ const Services = () => {
         animate={isHighlightsInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8 }}
         className="py-12 md:py-20 bg-gradient-to-b from-secondary/30 to-background"
+        style={{ filter: 'brightness(1.05)' }}
       >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="space-y-12 md:space-y-20">
@@ -390,12 +396,12 @@ const Services = () => {
                 }}
               >
                 <motion.div 
-                  className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 md:-top-4 md:-left-4 w-full h-full bg-gradient-to-br from-trust-green/20 to-transparent rounded-xl sm:rounded-2xl"
+                  className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 md:-top-4 md:-left-4 w-full h-full bg-gradient-to-br from-[#00b140]/20 to-transparent rounded-xl sm:rounded-2xl"
                   animate={{ 
                     boxShadow: [
-                      "0 0 0 rgba(34, 197, 94, 0.2)",
-                      "0 0 20px rgba(34, 197, 94, 0.4)",
-                      "0 0 0 rgba(34, 197, 94, 0.2)"
+                      "0 0 0 rgba(0, 177, 64, 0.2)",
+                      "0 0 20px rgba(0, 177, 64, 0.4)",
+                      "0 0 0 rgba(0, 177, 64, 0.2)"
                     ]
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
@@ -404,6 +410,7 @@ const Services = () => {
                   src={diningImage} 
                   alt="Speisesaal"
                   className="relative rounded-xl sm:rounded-2xl shadow-card w-full h-48 sm:h-64 md:h-80 object-cover"
+                  style={{ filter: 'brightness(1.1)' }}
                 />
               </motion.div>
               
@@ -420,7 +427,7 @@ const Services = () => {
                   transition={{ duration: 0.4, delay: 0.6 }}
                 >
                   <motion.div 
-                    className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center flex-shrink-0"
+                    className="w-7 h-7 sm:w-8 sm:h-8 bg-[#00b140] rounded-full flex items-center justify-center flex-shrink-0"
                     whileHover={{ 
                       scale: 1.1,
                       rotate: 5,
@@ -429,7 +436,7 @@ const Services = () => {
                   >
                     <Utensils className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                   </motion.div>
-                  <span className="text-trust-green font-semibold text-sm sm:text-base">Kulinarische Exzellenz</span>
+                  <span className="text-[#00b140] font-semibold text-sm sm:text-base">Kulinarische Exzellenz</span>
                 </motion.div>
                 <motion.h3 
                   className="text-2xl sm:text-3xl md:text-3xl font-bold text-foreground"
@@ -468,7 +475,7 @@ const Services = () => {
                       transition={{ duration: 0.4, delay: 1.4 + (index * 0.15) }}
                     >
                       <motion.div 
-                        className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-trust-green rounded-full mt-1 flex-shrink-0"
+                        className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#00b140] rounded-full mt-1 flex-shrink-0"
                         animate={{ scale: [1, 1.3, 1] }}
                         transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
                       ></motion.div>
@@ -497,12 +504,12 @@ const Services = () => {
                 }}
               >
                 <motion.div 
-                  className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 md:-top-4 md:-right-4 w-full h-full bg-gradient-to-br from-trust-green/20 to-transparent rounded-xl sm:rounded-2xl"
+                  className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 md:-top-4 md:-right-4 w-full h-full bg-gradient-to-br from-[#00b140]/20 to-transparent rounded-xl sm:rounded-2xl"
                   animate={{ 
                     boxShadow: [
-                      "0 0 0 rgba(34, 197, 94, 0.2)",
-                      "0 0 20px rgba(34, 197, 94, 0.4)",
-                      "0 0 0 rgba(34, 197, 94, 0.2)"
+                      "0 0 0 rgba(0, 177, 64, 0.2)",
+                      "0 0 20px rgba(0, 177, 64, 0.4)",
+                      "0 0 0 rgba(0, 177, 64, 0.2)"
                     ]
                   }}
                   transition={{ duration: 3, repeat: Infinity, delay: 0.8 }}
@@ -511,6 +518,7 @@ const Services = () => {
                   src={rehabImage} 
                   alt="Rehabilitationsraum"
                   className="relative rounded-xl sm:rounded-2xl shadow-card w-full h-48 sm:h-64 md:h-80 object-cover"
+                  style={{ filter: 'brightness(1.1)' }}
                 />
               </motion.div>
               
@@ -527,7 +535,7 @@ const Services = () => {
                   transition={{ duration: 0.4, delay: 1.0 }}
                 >
                   <motion.div 
-                    className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center flex-shrink-0"
+                    className="w-7 h-7 sm:w-8 sm:h-8 bg-[#00b140] rounded-full flex items-center justify-center flex-shrink-0"
                     whileHover={{ 
                       scale: 1.1,
                       rotate: 5,
@@ -536,7 +544,7 @@ const Services = () => {
                   >
                     <Dumbbell className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                   </motion.div>
-                  <span className="text-trust-green font-semibold text-sm sm:text-base">Erholung & Wohlbefinden</span>
+                  <span className="text-[#00b140] font-semibold text-sm sm:text-base">Erholung & Wohlbefinden</span>
                 </motion.div>
                 <motion.h3 
                   className="text-2xl sm:text-3xl md:text-3xl font-bold text-foreground"
@@ -577,12 +585,12 @@ const Services = () => {
                 }}
               >
                 <motion.div 
-                  className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 md:-top-4 md:-left-4 w-full h-full bg-gradient-to-br from-trust-green/20 to-transparent rounded-xl sm:rounded-2xl"
+                  className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 md:-top-4 md:-left-4 w-full h-full bg-gradient-to-br from-[#00b140]/20 to-transparent rounded-xl sm:rounded-2xl"
                   animate={{ 
                     boxShadow: [
-                      "0 0 0 rgba(34, 197, 94, 0.2)",
-                      "0 0 20px rgba(34, 197, 94, 0.4)",
-                      "0 0 0 rgba(34, 197, 94, 0.2)"
+                      "0 0 0 rgba(0, 177, 64, 0.2)",
+                      "0 0 20px rgba(0, 177, 64, 0.4)",
+                      "0 0 0 rgba(0, 177, 64, 0.2)"
                     ]
                   }}
                   transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
@@ -591,6 +599,7 @@ const Services = () => {
                   src={activitiesImage} 
                   alt="Aktivitätsprogramme"
                   className="relative rounded-xl sm:rounded-2xl shadow-card w-full h-48 sm:h-64 md:h-80 object-cover"
+                  style={{ filter: 'brightness(1.1)' }}
                 />
               </motion.div>
               
@@ -607,7 +616,7 @@ const Services = () => {
                   transition={{ duration: 0.4, delay: 1.0 }}
                 >
                   <motion.div 
-                    className="w-7 h-7 sm:w-8 sm:h-8 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center flex-shrink-0"
+                    className="w-7 h-7 sm:w-8 sm:h-8 bg-[#00b140] rounded-full flex items-center justify-center flex-shrink-0"
                     whileHover={{ 
                       scale: 1.1,
                       rotate: 5,
@@ -616,7 +625,7 @@ const Services = () => {
                   >
                     <Activity className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                   </motion.div>
-                  <span className="text-trust-green font-semibold text-sm sm:text-base">Bereicherungsprogramme</span>
+                  <span className="text-[#00b140] font-semibold text-sm sm:text-base">Bereicherungsprogramme</span>
                 </motion.div>
                 <motion.h3 
                   className="text-2xl sm:text-3xl md:text-3xl font-bold text-foreground"
@@ -659,7 +668,7 @@ const Services = () => {
                       }}
                     >
                       <motion.div 
-                        className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 mx-auto mb-2 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-lg flex items-center justify-center"
+                        className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 mx-auto mb-2 bg-[#00b140] rounded-lg flex items-center justify-center"
                         whileHover={{ 
                           scale: 1.1,
                           rotate: 5,
@@ -684,12 +693,13 @@ const Services = () => {
         initial={{ opacity: 0 }}
         animate={isCtaInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8 }}
-        className="py-12 md:py-20 bg-gradient-to-r from-trust-green to-trust-green/90 text-white relative"
+        className="py-12 md:py-20 bg-gradient-to-r from-[#00b140] to-[#00b140]/90 text-white relative"
         style={{
           backgroundImage: `url(${holdingHand})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
+          filter: 'brightness(1.1)',
         }}
       >
         {/* Dark overlay for better text readability */}
@@ -733,7 +743,7 @@ const Services = () => {
               >
                 <Button 
                   size="lg" 
-                  className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-white text-trust-green hover:bg-gray-100 font-semibold border-2 border-white transition-all duration-300 shadow-lg"
+                  className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-white text-[#00b140] hover:bg-gray-100 font-semibold border-2 border-white transition-all duration-300 shadow-lg"
                   onClick={handleContactClick}
                 >
                   Kontaktieren Sie uns

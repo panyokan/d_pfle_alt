@@ -37,7 +37,6 @@ const ContactPage = () => {
   const openingHours = [
     { day: "Mo-Fr", hours: "9:00 - 15:00" },
     { day: "Sa-So", hours: "Geschlossen" },
- 
   ];
 
   return (
@@ -46,23 +45,24 @@ const ContactPage = () => {
       
       {/* Hero Section - Increased height */}
       <section 
-        className="py-6 bg-gradient-to-br from-trust-green to-trust-green/40 text-white relative overflow-hidden"
+        className="py-6 bg-gradient-to-br from-[#00b140] to-[#00b140]/40 text-white relative overflow-hidden"
         style={{
           backgroundImage: `url(${couplehug})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center left',
           backgroundRepeat: 'no-repeat',
-          minHeight: '62vh', // Increased from 40vh to 54vh like AboutPage
+          minHeight: '62vh',
+          filter: 'brightness(1.1)',
         }}
       >
         {/* Darker overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         
         <motion.div 
-          className="absolute inset-0 bg-trust-green/5"
+          className="absolute inset-0 bg-[#00b140]/5"
           style={{ y }}
         ></motion.div>
-        <div className="container mx-auto px-6 text-center relative z-10 flex items-center justify-center py-36"> {/* Increased py-16 to py-20 */}
+        <div className="container mx-auto px-6 text-center relative z-10 flex items-center justify-center py-36">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">
               Kontakt aufnehmen
@@ -74,7 +74,7 @@ const ContactPage = () => {
               transition={{ duration: 0.4, delay: 0.1 }}
             >
               Wir sind hier, um Ihre Fragen zu beantworten, Informationen bereitzustellen und Ihnen zu helfen, 
-              zu entdecken, wie Dreieich Pflege das perfekte Zuhause für Ihren Angehörigen sein kann.
+              zu entdecken, wie Pflegedienst Dreieich das perfekte Zuhause für Ihren Angehörigen sein kann.
             </motion.p>
           </div>
         </div>
@@ -86,6 +86,7 @@ const ContactPage = () => {
         initial={{ opacity: 0 }}
         animate={isHeroInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.3 }}
+        style={{ filter: 'brightness(1.05)' }}
       >
         <div className="container mx-auto px-6">
           <div className="text-center mb-2">
@@ -104,7 +105,7 @@ const ContactPage = () => {
               transition={{ duration: 0.2, delay: 0.1 }}
             >
               Wir sind hier, um Ihre Fragen zu beantworten, Informationen bereitzustellen und Ihnen zu helfen, 
-              zu entdecken, wie Dreieich Pflege das perfekte Zuhause für Ihren Angehörigen sein kann.
+              zu entdecken, wie Pflegedienst Dreieich das perfekte Zuhause für Ihren Angehörigen sein kann.
             </motion.p>
           </div>
         </div>
@@ -116,7 +117,8 @@ const ContactPage = () => {
         initial={{ opacity: 0 }}
         animate={isLocationInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.3 }}
-        className="py-12 bg-gradient-to-b from-background to-secondary/30"
+        className="py-12 bg-gradient-to-b from-background to-secondary/20"
+        style={{ filter: 'brightness(1.05)' }}
       >
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
@@ -153,7 +155,7 @@ const ContactPage = () => {
                   content: (
                     <>
                       <div className="text-lg font-semibold text-foreground">
-                        Dreieich Pflege Senior Living
+                        Pflegedienst Dreieich Senior Living
                       </div>
                       <div className="text-muted-foreground">
                         Freiherr-vom-Stein-Straße 42, 63303 Dreieich, Germany
@@ -177,7 +179,7 @@ const ContactPage = () => {
                       <div className="space-y-4">
                         <div>
                           <div className="font-semibold text-foreground mb-2">Telefon</div>
-                          <div className="text-lg font-bold text-trust-green">+491606397787</div>
+                          <div className="text-lg font-bold text-[#00b140]">+491606397787</div>
                         </div>
                         
                         <div>
@@ -217,7 +219,7 @@ const ContactPage = () => {
                     <CardHeader>
                       <CardTitle className="flex items-center space-x-3">
                         <motion.div
-                          className="w-12 h-12 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-lg flex items-center justify-center"
+                          className="w-12 h-12 bg-[#00b140] rounded-lg flex items-center justify-center"
                           whileHover={{ 
                             scale: 1.1,
                             rotate: 5,
@@ -254,7 +256,7 @@ const ContactPage = () => {
                 >
                   <div className="flex items-center space-x-3">
                     <motion.div 
-                      className="w-10 h-10 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center"
+                      className="w-10 h-10 bg-[#00b140] rounded-full flex items-center justify-center"
                       whileHover={{ 
                         scale: 1.1,
                         rotate: 5,
@@ -269,7 +271,7 @@ const ContactPage = () => {
                     </div>
                   </div>
                   <motion.button
-                    className="px-4 py-2 bg-trust-green text-white rounded-lg text-sm font-medium hover:bg-trust-green/90 transition-colors"
+                    className="px-4 py-2 bg-[#00b140] text-white rounded-lg text-sm font-medium hover:bg-[#00b140]/90 transition-colors"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -287,7 +289,7 @@ const ContactPage = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Dreieich Pflege Senior Living Location"
+                    title="Pflegedienst Dreieich Senior Living Location"
                   ></iframe>
                 </div>
               </div>
@@ -308,7 +310,7 @@ const ContactPage = () => {
                   }}
                 >
                   <div className="flex items-center space-x-3 mb-2">
-                    <div className="w-8 h-8 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-[#00b140] rounded-full flex items-center justify-center">
                       <Bus className="w-4 h-4 text-white" />
                     </div>
                     <h4 className="font-semibold text-foreground">Öffentliche Verkehrsmittel</h4>
@@ -329,7 +331,7 @@ const ContactPage = () => {
                   }}
                 >
                   <div className="flex items-center space-x-3 mb-2">
-                    <div className="w-8 h-8 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-[#00b140] rounded-full flex items-center justify-center">
                       <span className="text-white text-xs font-bold">🚗</span>
                     </div>
                     <h4 className="font-semibold text-foreground">Parken</h4>
@@ -350,7 +352,7 @@ const ContactPage = () => {
                   }}
                 >
                   <div className="flex items-center space-x-3 mb-2">
-                    <div className="w-8 h-8 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-[#00b140] rounded-full flex items-center justify-center">
                       <span className="text-white text-xs font-bold">⏰</span>
                     </div>
                     <h4 className="font-semibold text-foreground">Besuchszeiten</h4>
@@ -373,6 +375,7 @@ const ContactPage = () => {
         initial={{ opacity: 0 }}
         animate={isContactFormInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.3 }}
+        style={{ filter: 'brightness(1.05)' }}
       >
         <Contact />
       </motion.div>

@@ -100,11 +100,12 @@ const Hero = () => {
               opacity: { duration: 1.8 }
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-deep-navy/75 via-deep-navy/60 to-deep-navy/85"></div>
+            {/* Made overlay lighter by reducing opacity */}
+            <div className="absolute inset-0 bg-gradient-to-b from-deep-navy/65 via-deep-navy/50 to-deep-navy/75"></div>
           </motion.div>
         ))}
-        {/* Mobile accent blur */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[60vw] h-[60vw] bg-trust-green/8 blur-[100px] rounded-full"></div>
+        {/* Mobile accent blur - made brighter */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[60vw] h-[60vw] bg-[#00b140]/15 blur-[100px] rounded-full"></div>
       </div>
 
       {/* Desktop */}
@@ -128,10 +129,12 @@ const Hero = () => {
               opacity: { duration: 1.8 }
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/80 via-deep-navy/65 to-deep-navy/45"></div>
+            {/* Made overlay lighter by reducing opacity */}
+            <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/70 via-deep-navy/55 to-deep-navy/35"></div>
           </motion.div>
         ))}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[80vw] bg-trust-green/10 blur-[120px] rounded-full"></div>
+        {/* Desktop accent blur - made brighter */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[80vw] bg-[#00b140]/15 blur-[120px] rounded-full"></div>
       </div>
 
       {/* ======= CONTENT ======= */}
@@ -145,8 +148,8 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="flex items-center space-x-3 mb-6 md:mb-8"
           >
-            <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-md rounded-full px-5 py-3 border border-white/30 shadow-lg">
-              <ShieldCheck className="w-5 h-5 text-trust-green" fill="currentColor" />
+            <div className="flex items-center space-x-2 bg-white/25 backdrop-blur-md rounded-full px-5 py-3 border border-white/30 shadow-lg">
+              <ShieldCheck className="w-5 h-5 text-[#00b140]" fill="currentColor" />
               <span className="text-white font-semibold text-sm tracking-wide">
                 Zertifiziert nach SGB XI/XII
               </span>
@@ -162,24 +165,13 @@ const Hero = () => {
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1]">
               <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent animate-gradient">
-                Mit Herz
-              </span>
-              <span className="block bg-gradient-to-r from-trust-green via-lime-300 to-trust-green/80 bg-clip-text text-transparent relative z-10 animate-gradient">
-                für Menschen
+Qualität ist              </span>
+              <span className="block bg-gradient-to-r from-[#00b140] via-[#00d950] to-[#00b140]/80 bg-clip-text text-transparent relative z-10 animate-gradient">
+                kein zufall 
               </span>
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-trust-green to-trust-green/80 rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#00b140] to-[#00b140]/80 rounded-full"></div>
           </motion.div>
-
-          {/* Subheadline */}
-          {/* <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="text-lg md:text-xl lg:text-2xl text-gray-100 mb-6 md:mb-10 max-w-2xl leading-relaxed font-light"
-          >
-            Qualität ist kein Zufall.
-          </motion.p> */}
 
           {/* Info Boxes */}
           <div className="grid grid-cols-3 gap-6 pt-12 border-t border-white/30">
@@ -193,13 +185,13 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.8 + i * 0.2 }}
-                className="flex items-center space-x-4 p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                className="flex items-center space-x-4 p-4 rounded-2xl bg-white/8 backdrop-blur-sm border border-white/10 hover:bg-white/15 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-[#00b140] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
                 <div>
-                  <div className="text-white font-bold text-base group-hover:text-trust-green transition-colors duration-300">
+                  <div className="text-white font-bold text-base group-hover:text-[#00b140] transition-colors duration-300">
                     {item.title}
                   </div>
                   <div className="text-gray-300 text-sm">{item.desc}</div>
@@ -219,8 +211,8 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <div className="flex items-center space-x-2 bg-white/15 backdrop-blur-md rounded-full px-4 py-2 border border-white/20 shadow-lg">
-                <ShieldCheck className="w-4 h-4 text-trust-green" fill="currentColor" />
+              <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-md rounded-full px-4 py-2 border border-white/20 shadow-lg">
+                <ShieldCheck className="w-4 h-4 text-[#00b140]" fill="currentColor" />
                 <span className="text-white font-medium text-xs tracking-wide">
                   Zertifiziert nach SGB XI/XII
                 </span>
@@ -238,22 +230,12 @@ const Hero = () => {
                 <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent animate-gradient">
                   Mit Herz
                 </span>
-                <span className="block bg-gradient-to-r from-trust-green via-lime-300 to-trust-green/80 bg-clip-text text-transparent animate-gradient">
+                <span className="block bg-gradient-to-r from-[#00b140] via-[#00d950] to-[#00b140]/80 bg-clip-text text-transparent animate-gradient">
                   für Menschen
                 </span>
               </h1>
-              <div className="w-16 h-1 bg-gradient-to-r from-trust-green to-trust-green/80 rounded-full mx-auto"></div>
+              <div className="w-16 h-1 bg-gradient-to-r from-[#00b140] to-[#00b140]/80 rounded-full mx-auto"></div>
             </motion.div>
-
-            {/* Mobile Subheadline */}
-            {/* <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg text-gray-100 font-light"
-            >
-              Qualität ist kein Zufall.
-            </motion.p> */}
 
             {/* Mobile Info Cards */}
             <div className="grid grid-cols-1 gap-3 w-full">
@@ -267,13 +249,13 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 + i * 0.1 }}
-                  className="flex items-center space-x-4 p-4 rounded-2xl bg-white/8 backdrop-blur-sm border border-white/15 hover:bg-white/12 transition-all duration-300 group"
+                  className="flex items-center space-x-4 p-4 rounded-2xl bg-white/12 backdrop-blur-sm border border-white/15 hover:bg-white/18 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#00b140] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                     {item.icon}
                   </div>
                   <div className="text-left flex-1">
-                    <div className="text-white font-semibold text-base group-hover:text-trust-green transition-colors duration-300">
+                    <div className="text-white font-semibold text-base group-hover:text-[#00b140] transition-colors duration-300">
                       {item.title}
                     </div>
                     <div className="text-gray-300 text-sm leading-tight mt-1">{item.desc}</div>
@@ -281,33 +263,6 @@ const Hero = () => {
                 </motion.div>
               ))}
             </div>
-
-            {/* Mobile CTA Button - Styled to match other blocks */}
-            {/* <motion.button
-              onClick={handleContactClick}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileHover={{ 
-                scale: 1.02,
-              }}
-              whileTap={{ 
-                scale: 0.98,
-                transition: { duration: 0.1 }
-              }}
-              transition={{ duration: 0.6, delay: 0.9 }}
-              className="w-full flex items-center space-x-4 p-4 rounded-2xl bg-white/8 backdrop-blur-sm border border-white/15 hover:bg-white/12 transition-all duration-300 group"
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                <MessageCircle className="w-5 h-5 text-white" />
-              </div>
-              <div className="text-left flex-1">
-                <div className="text-white font-semibold text-base group-hover:text-trust-green transition-colors duration-300 flex items-center space-x-2">
-                  <span>Kontakt aufnehmen</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </div>
-                <div className="text-gray-300 text-sm leading-tight mt-1">Jetzt unverbindlich beraten lassen</div>
-              </div>
-            </motion.button> */}
 
             {/* Quick Contact Info */}
             <motion.div
@@ -318,7 +273,7 @@ const Hero = () => {
             >
               <a 
                 href="tel:+4961038025731" 
-                className="text-white/80 hover:text-trust-green text-sm font-medium flex items-center justify-center space-x-2 transition-colors duration-300 hover:scale-105 transform"
+                className="text-white/80 hover:text-[#00b140] text-sm font-medium flex items-center justify-center space-x-2 transition-colors duration-300 hover:scale-105 transform"
               >
                 <Phone className="w-4 h-4" />
                 <span>06103 - 802 57 31</span>
@@ -329,7 +284,7 @@ const Hero = () => {
       </div>
 
       {/* Mobile Bottom Gradient */}
-      <div className="md:hidden absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-deep-navy via-deep-navy/60 to-transparent pointer-events-none"></div>
+      <div className="md:hidden absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-deep-navy via-deep-navy/50 to-transparent pointer-events-none"></div>
 
       <style>{`
         @keyframes gradientMove {

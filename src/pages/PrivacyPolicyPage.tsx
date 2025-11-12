@@ -9,7 +9,7 @@ const PrivacyPolicyPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-trust-green to-trust-green/90 text-white">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-[#00b140] to-[#00b140]/90 text-white">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-2">
             Datenschutzerklärung
@@ -25,10 +25,10 @@ const PrivacyPolicyPage = () => {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             {/* Responsible Party */}
-            <Card className="mb-8 md:mb-12 border-trust-green/20 shadow-lg">
-              <CardHeader className="bg-gradient-to-r from-trust-green/5 to-trust-green/10 p-4 sm:p-6">
+            <Card className="mb-8 md:mb-12 border-[#00b140]/20 shadow-lg">
+              <CardHeader className="bg-gradient-to-r from-[#00b140]/5 to-[#00b140]/10 p-4 sm:p-6">
                 <CardTitle className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
-                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-trust-green" />
+                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-[#00b140]" />
                   Verantwortlicher für die Datenverarbeitung
                 </CardTitle>
               </CardHeader>
@@ -40,7 +40,7 @@ const PrivacyPolicyPage = () => {
                   
                   <div className="space-y-3 sm:space-y-4">
                     <div className="flex items-start space-x-3 p-3 sm:p-4 bg-gray-50 rounded-lg">
-                      <User className="w-4 h-4 sm:w-5 sm:h-5 text-trust-green mt-1 flex-shrink-0" />
+                      <User className="w-4 h-4 sm:w-5 sm:h-5 text-[#00b140] mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Verantwortliche Personen:</h4>
                         <p className="text-gray-700 text-sm sm:text-base">Magdalena Glowa</p>
@@ -55,7 +55,7 @@ const PrivacyPolicyPage = () => {
                     <h3 className="text-base sm:text-lg font-semibold text-gray-900">Anschrift:</h3>
                     
                     <div className="flex items-start space-x-3">
-                      <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-trust-green mt-1 flex-shrink-0" />
+                      <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#00b140] mt-1 flex-shrink-0" />
                       <div>
                         <div className="font-medium text-gray-900 text-sm sm:text-base">Pflegedienst 3eich GmbH</div>
                         <div className="text-gray-700 text-sm sm:text-base">Freiherr-vom-Stein-Straße 42</div>
@@ -68,7 +68,7 @@ const PrivacyPolicyPage = () => {
                     <h3 className="text-base sm:text-lg font-semibold text-gray-900">Kontakt:</h3>
                     
                     <div className="flex items-center space-x-3">
-                      <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-trust-green flex-shrink-0" />
+                      <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#00b140] flex-shrink-0" />
                       <div>
                         <div className="font-medium text-gray-900 text-sm sm:text-base">Telefon:</div>
                         <div className="text-gray-700 text-sm sm:text-base">06103-8025731</div>
@@ -84,7 +84,7 @@ const PrivacyPolicyPage = () => {
                     </div>
                     
                     <div className="flex items-center space-x-3">
-                      <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-trust-green flex-shrink-0" />
+                      <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#00b140] flex-shrink-0" />
                       <div>
                         <div className="font-medium text-gray-900 text-sm sm:text-base">E-mail:</div>
                         <div className="text-gray-700 text-sm sm:text-base break-all">pflegedienst.3eich@yahoo.com</div>
@@ -96,8 +96,8 @@ const PrivacyPolicyPage = () => {
             </Card>
 
             {/* Datenschutzerklärung */}
-            <Card className="mb-6 md:mb-8 border-trust-green/20 shadow-lg">
-              <CardHeader className="bg-gradient-to-r from-trust-green/5 to-trust-green/10 p-4 sm:p-6">
+            <Card className="mb-6 md:mb-8 border-[#00b140]/20 shadow-lg">
+              <CardHeader className="bg-gradient-to-r from-[#00b140]/5 to-[#00b140]/10 p-4 sm:p-6">
                 <CardTitle className="text-xl sm:text-2xl font-bold text-gray-900">
                   Datenschutzerklärung
                 </CardTitle>
@@ -116,8 +116,8 @@ const PrivacyPolicyPage = () => {
             {/* Sections */}
             <div className="space-y-6 md:space-y-8">
               {/* Section 1 */}
-              <Card className="border-trust-green/20 shadow-lg">
-                <CardHeader className="bg-gradient-to-r from-trust-green/5 to-trust-green/10 p-4 sm:p-6">
+              <Card className="border-[#00b140]/20 shadow-lg">
+                <CardHeader className="bg-gradient-to-r from-[#00b140]/5 to-[#00b140]/10 p-4 sm:p-6">
                   <CardTitle className="text-lg sm:text-xl font-bold text-gray-900">
                     1. Art und Umfang der Datenverarbeitung
                   </CardTitle>
@@ -149,8 +149,8 @@ const PrivacyPolicyPage = () => {
               </Card>
 
               {/* Section 2 */}
-              <Card className="border-trust-green/20 shadow-lg">
-                <CardHeader className="bg-gradient-to-r from-trust-green/5 to-trust-green/10 p-4 sm:p-6">
+              <Card className="border-[#00b140]/20 shadow-lg">
+                <CardHeader className="bg-gradient-to-r from-[#00b140]/5 to-[#00b140]/10 p-4 sm:p-6">
                   <CardTitle className="text-lg sm:text-xl font-bold text-gray-900">
                     2. Datenverarbeitung zur Bearbeitung Ihrer Anfragen
                   </CardTitle>
@@ -189,10 +189,10 @@ const PrivacyPolicyPage = () => {
               </Card>
 
               {/* Section 3 */}
-              <Card className="border-trust-green/20 shadow-lg">
-                <CardHeader className="bg-gradient-to-r from-trust-green/5 to-trust-green/10 p-4 sm:p-6">
+              <Card className="border-[#00b140]/20 shadow-lg">
+                <CardHeader className="bg-gradient-to-r from-[#00b140]/5 to-[#00b140]/10 p-4 sm:p-6">
                   <CardTitle className="text-lg sm:text-xl font-bold text-gray-900 flex items-center">
-                    <Lock className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
+                    <Lock className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0 text-[#00b140]" />
                     3. SSL- bzw. TLS-Verschlüsselung
                   </CardTitle>
                 </CardHeader>
@@ -214,8 +214,8 @@ const PrivacyPolicyPage = () => {
               </Card>
 
               {/* Section 4 */}
-              <Card className="border-trust-green/20 shadow-lg">
-                <CardHeader className="bg-gradient-to-r from-trust-green/5 to-trust-green/10 p-4 sm:p-6">
+              <Card className="border-[#00b140]/20 shadow-lg">
+                <CardHeader className="bg-gradient-to-r from-[#00b140]/5 to-[#00b140]/10 p-4 sm:p-6">
                   <CardTitle className="text-lg sm:text-xl font-bold text-gray-900">
                     4. Server-Log-Dateien
                   </CardTitle>
@@ -246,10 +246,10 @@ const PrivacyPolicyPage = () => {
               </Card>
 
               {/* Section 5 */}
-              <Card className="border-trust-green/20 shadow-lg">
-                <CardHeader className="bg-gradient-to-r from-trust-green/5 to-trust-green/10 p-4 sm:p-6">
+              <Card className="border-[#00b140]/20 shadow-lg">
+                <CardHeader className="bg-gradient-to-r from-[#00b140]/5 to-[#00b140]/10 p-4 sm:p-6">
                   <CardTitle className="text-lg sm:text-xl font-bold text-gray-900 flex items-center">
-                    <Cookie className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
+                    <Cookie className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0 text-[#00b140]" />
                     5. Cookies
                   </CardTitle>
                 </CardHeader>
@@ -268,10 +268,10 @@ const PrivacyPolicyPage = () => {
               </Card>
 
               {/* Section 9 - Your Rights */}
-              <Card className="border-trust-green/20 shadow-lg">
-                <CardHeader className="bg-gradient-to-r from-trust-green/5 to-trust-green/10 p-4 sm:p-6">
+              <Card className="border-[#00b140]/20 shadow-lg">
+                <CardHeader className="bg-gradient-to-r from-[#00b140]/5 to-[#00b140]/10 p-4 sm:p-6">
                   <CardTitle className="text-lg sm:text-xl font-bold text-gray-900 flex items-center">
-                    <FileText className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
+                    <FileText className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0 text-[#00b140]" />
                     9. Ihre Rechte
                   </CardTitle>
                 </CardHeader>
@@ -357,8 +357,8 @@ const PrivacyPolicyPage = () => {
               </Card>
 
               {/* Final Sections */}
-              <Card className="border-trust-green/20 shadow-lg">
-                <CardHeader className="bg-gradient-to-r from-trust-green/5 to-trust-green/10 p-4 sm:p-6">
+              <Card className="border-[#00b140]/20 shadow-lg">
+                <CardHeader className="bg-gradient-to-r from-[#00b140]/5 to-[#00b140]/10 p-4 sm:p-6">
                   <CardTitle className="text-lg sm:text-xl font-bold text-gray-900">
                     10. Pflicht zur Bereitstellung von Daten
                   </CardTitle>
@@ -375,8 +375,8 @@ const PrivacyPolicyPage = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-trust-green/20 shadow-lg">
-                <CardHeader className="bg-gradient-to-r from-trust-green/5 to-trust-green/10 p-4 sm:p-6">
+              <Card className="border-[#00b140]/20 shadow-lg">
+                <CardHeader className="bg-gradient-to-r from-[#00b140]/5 to-[#00b140]/10 p-4 sm:p-6">
                   <CardTitle className="text-lg sm:text-xl font-bold text-gray-900">
                     11. Aktualisierung dieser Datenschutzhinweise
                   </CardTitle>

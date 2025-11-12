@@ -9,49 +9,49 @@ const services = [
     title: "Hauswirtschaftliche Hilfe",
     description: "Professionelle Unterstützung bei Haushalt, Einkäufen und täglicher Organisation.",
     icon: Home,
-    color: "from-trust-green to-trust-green/80",
+    color: "bg-[#00b140]",
     bgColor: "bg-gradient-to-br from-white to-gray-50",
-    borderColor: "border-trust-green/20"
+    borderColor: "border-[#00b140]/20"
   },
   {
     title: "Entlastungsleistungen",
     description: "Entlastung für pflegende Angehörige durch qualifizierte Betreuung und Unterstützung.",
     icon: Shield,
-    color: "from-trust-green to-trust-green/80",
+    color: "bg-[#00b140]",
     bgColor: "bg-gradient-to-br from-white to-gray-50",
-    borderColor: "border-trust-green/20"
+    borderColor: "border-[#00b140]/20"
   },
   {
     title: "Beratung & Planung",
     description: "Umfassende Beratung zu Pflegeleistungen, Anträgen und individuellen Betreuungsplänen.",
     icon: Users,
-    color: "from-trust-green to-trust-green/80",
+    color: "bg-[#00b140]",
     bgColor: "bg-gradient-to-br from-white to-gray-50",
-    borderColor: "border-trust-green/20"
+    borderColor: "border-[#00b140]/20"
   },
   {
     title: "Gesellschaft & Begleitung",
     description: "Menschliche Begleitung, Gespräche und gemeinsame Aktivitäten für mehr Lebensqualität.",
     icon: Heart,
-    color: "from-trust-green to-trust-green/80",
+    color: "bg-[#00b140]",
     bgColor: "bg-gradient-to-br from-white to-gray-50",
-    borderColor: "border-trust-green/20"
+    borderColor: "border-[#00b140]/20"
   },
   {
     title: "Pflegehilfsmittel",
     description: "Beratung und Unterstützung bei der Beschaffung und Nutzung von Pflegehilfsmitteln.",
     icon: Shield,
-    color: "from-trust-green to-trust-green/80",
+    color: "bg-[#00b140]",
     bgColor: "bg-gradient-to-br from-white to-gray-50",
-    borderColor: "border-trust-green/20"
+    borderColor: "border-[#00b140]/20"
   },
   {
-    title: "24/7 Notfallbetreuung",
-    description: "Rund um die Uhr erreichbar für Notfälle und dringende Betreuungsanfragen.",
+    title: "24/7 Für Sie erreichbar",
+    description: "Rund um die Uhr erreichbar für Ihre Anfragen und Terminwünsche.",
     icon: Clock,
-    color: "from-trust-green to-trust-green/80",
+    color: "bg-[#00b140]",
     bgColor: "bg-gradient-to-br from-white to-gray-50",
-    borderColor: "border-trust-green/20"
+    borderColor: "border-[#00b140]/20"
   }
 ];
 
@@ -98,13 +98,13 @@ const Services = () => {
               onClick={() => handleServiceClick(service.title)}
             >
               {/* Premium hover effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-trust-green/5 to-emerald-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00b140]/5 to-[#00b140]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <CardHeader className="text-center pb-4 relative z-10">
-                <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center group-hover:animate-float transition-transform duration-300 shadow-lg group-hover:shadow-xl group-hover:scale-110`}>
+                <div className={`w-16 h-16 mx-auto mb-4 ${service.color} rounded-full flex items-center justify-center group-hover:animate-float transition-transform duration-300 shadow-lg group-hover:shadow-xl group-hover:scale-110`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-xl text-gray-900 group-hover:text-trust-green transition-colors duration-300">
+                <CardTitle className="text-xl text-gray-900 group-hover:text-[#00b140] transition-colors duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
@@ -115,14 +115,14 @@ const Services = () => {
                 <div className="text-center">
                   <Button 
                     size="lg"
-                    className="text-lg px-8 py-6 bg-white text-trust-green hover:bg-trust-green hover:text-white font-semibold border-2 border-trust-green transition-all duration-300 shadow-lg w-full group/btn relative overflow-hidden hover:shadow-xl hover:border-emerald-500"
+                    className="text-lg px-8 py-6 bg-white text-[#00b140] hover:bg-[#00b140] hover:text-white font-semibold border-2 border-[#00b140] transition-all duration-300 shadow-lg w-full group/btn relative overflow-hidden hover:shadow-xl hover:border-[#00b140]"
                     onClick={(e) => {
                       e.stopPropagation();
                       handleLearnMoreClick();
                     }}
                   >
                     {/* Animated background on hover */}
-                    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-trust-green via-emerald-500 to-trust-green transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></span>
+                    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#00b140] via-[#00a138] to-[#00b140] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></span>
                     
                     {/* Sparkle effect */}
                     <Sparkles className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />

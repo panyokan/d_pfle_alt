@@ -5,11 +5,11 @@ import { Mail, Phone, MapPin, User, Building } from "lucide-react";
 
 const ImprintPage = () => {
   return (
-    <div className="min-h-screen font-montserrat">
+    <div className="min-h-screen font-montserrat bg-green-50">
       <Header />
       
       {/* Hero Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-trust-green to-trust-green/90 text-white">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-green-600 to-green-800 text-white">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-2">
             Impressum
@@ -21,14 +21,14 @@ const ImprintPage = () => {
       </section>
 
       {/* Content Section */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-12 md:py-16 bg-green-50">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             {/* Company Information */}
-            <Card className="mb-8 md:mb-12 border-trust-green/20 shadow-lg">
-              <CardHeader className="bg-gradient-to-r from-trust-green/5 to-trust-green/10 p-4 sm:p-6">
+            <Card className="mb-8 md:mb-12 border-green-300 shadow-lg bg-white">
+              <CardHeader className="bg-gradient-to-r from-green-500/10 to-green-600/10 p-4 sm:p-6">
                 <CardTitle className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
-                  <Building className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-trust-green flex-shrink-0" />
+                  <Building className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-green-600 flex-shrink-0" />
                   Unternehmensinformationen
                 </CardTitle>
               </CardHeader>
@@ -37,16 +37,16 @@ const ImprintPage = () => {
                   <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Verantwortlich:</h3>
                   
                   <div className="space-y-3 sm:space-y-4">
-                    <div className="flex items-start space-x-3 p-3 sm:p-4 bg-gray-50 rounded-lg">
-                      <User className="w-4 h-4 sm:w-5 sm:h-5 text-trust-green mt-1 flex-shrink-0" />
+                    <div className="flex items-start space-x-3 p-3 sm:p-4 bg-green-50 rounded-lg border border-green-100">
+                      <User className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Geschäftsführerin und Pflegedienstleiterin:</h4>
                         <p className="text-gray-700 text-sm sm:text-base">Magdalena Glowa - Examinierte Altenpflegerin</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start space-x-3 p-3 sm:p-4 bg-gray-50 rounded-lg">
-                      <User className="w-4 h-4 sm:w-5 sm:h-5 text-trust-green mt-1 flex-shrink-0" />
+                    <div className="flex items-start space-x-3 p-3 sm:p-4 bg-green-50 rounded-lg border border-green-100">
+                      <User className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-gray-900 text-sm sm:text-base">Geschäftsführerin und stellvertretende Pflegedienstleiterin:</h4>
                         <p className="text-gray-700 text-sm sm:text-base">Puneet Kaur Parmar - Krankenschwester</p>
@@ -59,8 +59,8 @@ const ImprintPage = () => {
                   <div className="space-y-3 sm:space-y-4">
                     <h3 className="text-base sm:text-lg font-semibold text-gray-900">Kontakt:</h3>
                     
-                    <div className="flex items-start space-x-3">
-                      <Building className="w-4 h-4 sm:w-5 sm:h-5 text-trust-green mt-1 flex-shrink-0" />
+                    <div className="flex items-start space-x-3 p-3 bg-green-50 rounded-lg border border-green-100">
+                      <Building className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mt-1 flex-shrink-0" />
                       <div>
                         <div className="font-medium text-gray-900 text-sm sm:text-base">Pflegedienst 3eich GmbH</div>
                         <div className="text-gray-700 text-sm sm:text-base">Freiherr-vom-Stein-Straße 42</div>
@@ -68,15 +68,15 @@ const ImprintPage = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-center space-x-3">
-                      <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-trust-green flex-shrink-0" />
+                    <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg border border-green-100">
+                      <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" />
                       <div>
                         <div className="font-medium text-gray-900 text-sm sm:text-base">Telefon:</div>
                         <div className="text-gray-700 text-sm sm:text-base">06103-8025731</div>
                       </div>
                     </div>
                     
-                    <div className="flex items-center space-x-3">
+                    <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg border border-green-100">
                       <div className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                       <div>
                         <div className="font-medium text-gray-900 text-sm sm:text-base">Fax:</div>
@@ -84,8 +84,8 @@ const ImprintPage = () => {
                       </div>
                     </div>
                     
-                    <div className="flex items-center space-x-3">
-                      <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-trust-green flex-shrink-0" />
+                    <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg border border-green-100">
+                      <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" />
                       <div>
                         <div className="font-medium text-gray-900 text-sm sm:text-base">E-mail:</div>
                         <div className="text-gray-700 text-sm sm:text-base break-all">pflegedienst.3eich@yahoo.com</div>
@@ -96,12 +96,12 @@ const ImprintPage = () => {
                   <div className="space-y-3 sm:space-y-4">
                     <h3 className="text-base sm:text-lg font-semibold text-gray-900">Rechtliche Informationen:</h3>
                     
-                    <div className="p-3 sm:p-4 bg-gray-50 rounded-lg">
+                    <div className="p-3 sm:p-4 bg-green-50 rounded-lg border border-green-100">
                       <div className="font-medium text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">Handelsregisternummer:</div>
                       <div className="text-gray-700 text-sm sm:text-base">55045</div>
                     </div>
                     
-                    <div className="p-3 sm:p-4 bg-gray-50 rounded-lg">
+                    <div className="p-3 sm:p-4 bg-green-50 rounded-lg border border-green-100">
                       <div className="font-medium text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">Rechtsform:</div>
                       <div className="text-gray-700 text-sm sm:text-base">Gesellschaft mit beschränkter Haftung (GmbH)</div>
                     </div>
@@ -113,8 +113,8 @@ const ImprintPage = () => {
             {/* Legal Sections */}
             <div className="space-y-6 md:space-y-8">
               {/* Haftungsausschluss */}
-              <Card className="border-trust-green/20 shadow-lg">
-                <CardHeader className="bg-gradient-to-r from-trust-green/5 to-trust-green/10 p-4 sm:p-6">
+              <Card className="border-green-300 shadow-lg bg-white">
+                <CardHeader className="bg-gradient-to-r from-green-500/10 to-green-600/10 p-4 sm:p-6">
                   <CardTitle className="text-xl sm:text-2xl font-bold text-gray-900">
                     Haftungsausschluss (Disclaimer)
                   </CardTitle>

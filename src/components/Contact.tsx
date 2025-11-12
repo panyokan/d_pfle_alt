@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Sparkles, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
@@ -33,40 +33,40 @@ const Contact = () => {
             </div>
             
             <div className="space-y-6">
-              <Card className="border-trust-green/20 hover:shadow-soft transition-all duration-300 bg-gradient-to-br from-white to-gray-50">
+              <Card className="border-[#00b140]/20 hover:shadow-soft transition-all duration-300 bg-gradient-to-br from-white to-gray-50">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-[#00b140] rounded-full flex items-center justify-center">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">Telefon</h4>
-                      <p className="text-lg font-bold text-trust-green">+491606397787</p>
+                      <p className="text-lg font-bold text-[#00b140]">+491606397787</p>
                       <p className="text-sm text-muted-foreground">Mo-Fr: 9:00 - 15:00</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
               
-              <Card className="border-compassionate-green/20 hover:shadow-soft transition-all duration-300 bg-gradient-to-br from-white to-gray-50">
+              <Card className="border-[#00b140]/20 hover:shadow-soft transition-all duration-300 bg-gradient-to-br from-white to-gray-50">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-[#00b140] rounded-full flex items-center justify-center">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">E-Mail</h4>
-                      <p className="text-trust-green font-medium">info@dreieich-pflege.de</p>
+                      <p className="text-[#00b140] font-medium">info@dreieich-pflege.de</p>
                       <p className="text-sm text-muted-foreground">Antwort innerhalb 24h</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
               
-              <Card className="border-accent-orange/20 hover:shadow-soft transition-all duration-300 bg-gradient-to-br from-white to-gray-50">
+              <Card className="border-[#00b140]/20 hover:shadow-soft transition-all duration-300 bg-gradient-to-br from-white to-gray-50">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-[#00b140] rounded-full flex items-center justify-center">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -78,10 +78,10 @@ const Contact = () => {
                 </CardContent>
               </Card>
               
-              <Card className="border-compassionate-green/20 hover:shadow-soft transition-all duration-300 bg-gradient-to-br from-white to-gray-50">
+              <Card className="border-[#00b140]/20 hover:shadow-soft transition-all duration-300 bg-gradient-to-br from-white to-gray-50">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-[#00b140] rounded-full flex items-center justify-center">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -164,16 +164,30 @@ const Contact = () => {
                 <input type="checkbox" id="privacy" className="rounded" />
                 <label htmlFor="privacy" className="text-sm text-muted-foreground font-montserrat">
                   Ich stimme der{" "}
-                  <Link to="/privacy" className="text-trust-green hover:underline font-medium">
+                  <Link to="/privacy" className="text-[#00b140] hover:underline font-medium">
                     Datenschutzerklärung
                   </Link>{" "}
                   zu *
                 </label>
               </div>
               
-              <Button variant="trust" size="lg" className="w-full font-montserrat">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Beratung anfordern
+              <Button 
+                size="lg"
+                className="text-lg px-8 py-6 bg-white text-[#00b140] hover:bg-[#00b140] hover:text-white font-semibold border-2 border-[#00b140] transition-all duration-300 shadow-lg w-full group/btn relative overflow-hidden hover:shadow-xl hover:border-[#00b140]"
+              >
+                {/* Animated background on hover */}
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#00b140] via-[#00a138] to-[#00b140] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></span>
+                
+                {/* Sparkle effect */}
+                <Sparkles className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />
+                <Sparkles className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300 delay-150" />
+                
+                {/* Button content */}
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  <MessageCircle className="w-5 h-5" />
+                  Beratung anfordern
+                  <ArrowRight className="w-5 h-5 transform group-hover/btn:translate-x-2 transition-transform duration-300 group-hover/btn:scale-110" />
+                </span>
               </Button>
               
               <p className="text-xs text-muted-foreground text-center font-montserrat">

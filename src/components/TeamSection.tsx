@@ -193,7 +193,7 @@ const TeamSection = () => {
         >
           <motion.div 
             variants={itemVariants}
-            className="inline-flex items-center space-x-2 bg-trust-green/10 text-trust-green px-4 py-2 rounded-full text-sm font-medium mb-4"
+            className="inline-flex items-center space-x-2 bg-[#00b140]/10 text-[#00b140] px-4 py-2 rounded-full text-sm font-medium mb-4"
           >
             <Users className="w-4 h-4" />
             <span>Unser Team</span>
@@ -244,12 +244,12 @@ const TeamSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 <motion.div 
-                  className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full border border-trust-green/30 shadow-md"
+                  className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full border border-[#00b140]/30 shadow-md"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.5 + index * 0.1, duration: 0.3 }}
                 >
-                  <span className="text-sm font-bold text-trust-green">
+                  <span className="text-sm font-bold text-[#00b140]">
                     Geschäftsführung
                   </span>
                 </motion.div>
@@ -261,13 +261,13 @@ const TeamSection = () => {
                 <div className="text-center mb-4">
                   <motion.h3 
                     className="text-xl font-bold text-gray-900 mb-1"
-                    whileHover={{ color: "#059669" }}
+                    whileHover={{ color: "#00b140" }}
                     transition={{ duration: 0.2 }}
                   >
                     {member.name}
                   </motion.h3>
                   <motion.p 
-                    className="text-trust-green font-semibold text-sm mb-3"
+                    className="text-[#00b140] font-semibold text-sm mb-3"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
@@ -281,20 +281,20 @@ const TeamSection = () => {
                   >
                     <motion.div 
                       variants={itemVariants}
-                      className="flex items-center space-x-2 bg-trust-green/5 px-3 py-1 rounded-full"
-                      whileHover={{ scale: 1.05, backgroundColor: "rgba(5, 150, 105, 0.1)" }}
+                      className="flex items-center space-x-2 bg-[#00b140]/5 px-3 py-1 rounded-full"
+                      whileHover={{ scale: 1.05, backgroundColor: "rgba(0, 177, 64, 0.1)" }}
                       transition={{ duration: 0.2 }}
                     >
-                      <Award className="w-4 h-4 text-trust-green" />
+                      <Award className="w-4 h-4 text-[#00b140]" />
                       <span className="text-gray-700 font-medium">{member.qualification}</span>
                     </motion.div>
                     <motion.div 
                       variants={itemVariants}
-                      className="flex items-center space-x-2 bg-trust-green/5 px-3 py-1 rounded-full"
-                      whileHover={{ scale: 1.05, backgroundColor: "rgba(5, 150, 105, 0.1)" }}
+                      className="flex items-center space-x-2 bg-[#00b140]/5 px-3 py-1 rounded-full"
+                      whileHover={{ scale: 1.05, backgroundColor: "rgba(0, 177, 64, 0.1)" }}
                       transition={{ duration: 0.2 }}
                     >
-                      <Calendar className="w-4 h-4 text-trust-green" />
+                      <Calendar className="w-4 h-4 text-[#00b140]" />
                       <span className="text-gray-700 font-medium">{member.experience}</span>
                     </motion.div>
                   </motion.div>
@@ -315,7 +315,7 @@ const TeamSection = () => {
 
               {/* Decorative Bottom Border */}
               <motion.div 
-                className="h-1.5 bg-gradient-to-r from-trust-green to-trust-green/70"
+                className="h-1.5 bg-gradient-to-r from-[#00b140] to-[#00b140]/70"
                 whileInView={{ width: "100%" }}
                 initial={{ width: "0%" }}
                 transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
@@ -355,7 +355,7 @@ const TeamSection = () => {
                 className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group"
               >
                 <motion.div 
-                  className="w-14 h-14 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md"
+                  className="w-14 h-14 bg-[#00b140] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.5 }}
                 >
@@ -423,7 +423,7 @@ const TeamSection = () => {
             <motion.div variants={itemVariants}>
               <Button 
                 size="lg"
-                className="text-lg px-12 py-6 bg-white text-trust-green hover:bg-trust-green hover:text-white font-semibold border-2 border-trust-green transition-all duration-300 shadow-lg w-full group/btn relative overflow-hidden hover:shadow-xl hover:border-emerald-500"
+                className="text-lg px-12 py-6 bg-white text-[#00b140] hover:bg-[#00b140] hover:text-white font-semibold border-2 border-[#00b140] transition-all duration-300 shadow-lg w-full group/btn relative overflow-hidden hover:shadow-xl hover:border-[#00b140]"
                 onClick={(e) => {
                   e.stopPropagation();
                   handleLearnMoreClick();
@@ -432,7 +432,7 @@ const TeamSection = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 {/* Animated background on hover */}
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-trust-green via-emerald-500 to-trust-green transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></span>
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#00b140] via-[#00a138] to-[#00b140] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></span>
                 
                 {/* Sparkle effect */}
                 <Sparkles className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />
@@ -449,7 +449,7 @@ const TeamSection = () => {
             <motion.div variants={itemVariants}>
               <Button 
                 size="lg"
-                className="text-lg px-12 py-6 bg-white text-trust-green hover:bg-trust-green hover:text-white font-semibold border-2 border-trust-green transition-all duration-300 shadow-lg w-full group/btn relative overflow-hidden hover:shadow-xl hover:border-emerald-500"
+                className="text-lg px-12 py-6 bg-white text-[#00b140] hover:bg-[#00b140] hover:text-white font-semibold border-2 border-[#00b140] transition-all duration-300 shadow-lg w-full group/btn relative overflow-hidden hover:shadow-xl hover:border-[#00b140]"
                 onClick={(e) => {
                   e.stopPropagation();
                   handleContactClick();
@@ -458,7 +458,7 @@ const TeamSection = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 {/* Animated background on hover */}
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-trust-green via-emerald-500 to-trust-green transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></span>
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#00b140] via-[#00a138] to-[#00b140] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></span>
                 
                 {/* Sparkle effect */}
                 <Sparkles className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />

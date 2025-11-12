@@ -17,7 +17,7 @@ const Imprint = () => {
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Wichtige rechtliche Informationen, Lizenzdetails und Compliance-Informationen 
-              für die Dreieich Pflege Seniorenwohnanlage.
+              für die Pflegedienst Dreieich Seniorenwohnanlage.
             </p>
           </div>
         </div>
@@ -35,14 +35,16 @@ const Imprint = () => {
               <Card className="border-border/50">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-3">
-                    <Building className="w-5 h-5 text-trust-green" />
+                    <div className="w-12 h-12 bg-[#00b140] rounded-lg flex items-center justify-center">
+                      <Building className="w-6 h-6 text-white" />
+                    </div>
                     <span>Einrichtungsdetails</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
                     <div className="font-semibold text-foreground">Rechtlicher Name:</div>
-                    <div className="text-muted-foreground">Dreieich Pflege Seniorenwohnanlage GmbH</div>
+                    <div className="text-muted-foreground">Pflegedienst Dreieich Seniorenwohnanlage GmbH</div>
                   </div>
                   <div>
                     <div className="font-semibold text-foreground">Adresse:</div>
@@ -72,7 +74,9 @@ const Imprint = () => {
               <Card className="border-border/50">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-3">
-                    <Users className="w-5 h-5 text-trust-green" />
+                    <div className="w-12 h-12 bg-[#00b140] rounded-lg flex items-center justify-center">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
                     <span>Führungsteam</span>
                   </CardTitle>
                 </CardHeader>
@@ -115,7 +119,7 @@ const Imprint = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-border/50 animate-scale-in">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-trust-green to-trust-green/80 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-[#00b140] rounded-full flex items-center justify-center">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl text-foreground">Landeslizenz</CardTitle>
@@ -124,13 +128,13 @@ const Imprint = () => {
                 <div className="font-semibold text-foreground">Lizenz Nr.: HE-2024-789</div>
                 <div className="text-muted-foreground">Ausgestellt vom Landesgesundheitsamt</div>
                 <div className="text-muted-foreground">Gültig bis 31. Dezember 2024</div>
-                <div className="text-sm text-trust-green font-semibold">5-Sterne Bewertung</div>
+                <div className="text-sm text-[#00b140] font-semibold">5-Sterne Bewertung</div>
               </CardContent>
             </Card>
             
             <Card className="hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-border/50 animate-scale-in delay-100">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-warm-green to-warm-green/80 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-[#00b140] rounded-full flex items-center justify-center">
                   <Scale className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl text-foreground">MDK Zertifiziert</CardTitle>
@@ -139,14 +143,14 @@ const Imprint = () => {
                 <div className="font-semibold text-foreground">Anbieter Nr.: 124567</div>
                 <div className="text-muted-foreground">Medizinischer Dienst der Krankenversicherung</div>
                 <div className="text-muted-foreground">Aktuelle Zertifizierung aktiv</div>
-                <div className="text-sm text-warm-green font-semibold">Vollständige Compliance</div>
+                <div className="text-sm text-[#00b140] font-semibold">Vollständige Compliance</div>
               </CardContent>
             </Card>
             
             <Card className="hover:shadow-card transition-all duration-300 hover:-translate-y-1 border-border/50 animate-scale-in delay-200">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent to-accent/80 rounded-full flex items-center justify-center">
-                  <FileText className="w-8 h-8 text-warm-green" />
+                <div className="w-16 h-16 mx-auto mb-4 bg-[#00b140] rounded-full flex items-center justify-center">
+                  <FileText className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl text-foreground">Akkreditierungen</CardTitle>
               </CardHeader>
@@ -154,7 +158,7 @@ const Imprint = () => {
                 <div className="text-muted-foreground">TÜV Süd Zertifiziert</div>
                 <div className="text-muted-foreground">Deutscher Pflegeverband Mitglied</div>
                 <div className="text-muted-foreground">Bundesverband Mitglied</div>
-                <div className="text-sm text-accent font-semibold">Alle Aktuell</div>
+                <div className="text-sm text-[#00b140] font-semibold">Alle Aktuell</div>
               </CardContent>
             </Card>
           </div>
@@ -177,7 +181,7 @@ const Imprint = () => {
               </CardHeader>
               <CardContent className="prose prose-gray max-w-none">
                 <p className="text-muted-foreground leading-relaxed">
-                  Dreieich Pflege Seniorenwohnanlage ist verpflichtet, die Privatsphäre und Vertraulichkeit 
+                  Pflegedienst Dreieich Seniorenwohnanlage ist verpflichtet, die Privatsphäre und Vertraulichkeit 
                   der persönlichen und gesundheitsbezogenen Daten unserer Bewohner zu schützen. Wir halten uns 
                   an alle geltenden Datenschutzgesetze einschließlich der DSGVO (Datenschutz-Grundverordnung) 
                   und unterhalten strenge Protokolle für den Umgang mit sensiblen Informationen.
@@ -242,7 +246,7 @@ const Imprint = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  Dreieich Pflege unterhält umfassende Notfallvorsorgepläne, die von lokalen und 
+                  Pflegedienst Dreieich unterhält umfassende Notfallvorsorgepläne, die von lokalen und 
                   staatlichen Behörden genehmigt wurden. Unsere Einrichtung ist mit Notstrom, 
                   Kommunikationssystemen und Evakuierungsverfahren ausgestattet. Alle Mitarbeiter 
                   erhalten regelmäßige Notfallreaktionstrainings, und wir führen das ganze Jahr über 
@@ -263,7 +267,7 @@ const Imprint = () => {
               Für spezifische medizinische Beratung oder Pflegeentscheidungen konsultieren Sie bitte unsere Gesundheitsfachkräfte.
             </p>
             <p className="mt-2">
-              Zuletzt aktualisiert: Januar 2024 | © 2024 Dreieich Pflege Seniorenwohnanlage GmbH. Alle Rechte vorbehalten.
+              Zuletzt aktualisiert: Januar 2024 | © 2024 Pflegedienst Dreieich Seniorenwohnanlage GmbH. Alle Rechte vorbehalten.
             </p>
           </div>
         </div>
