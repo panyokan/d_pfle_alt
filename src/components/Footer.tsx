@@ -103,6 +103,16 @@ const Footer = () => {
               
               <div className="flex items-center space-x-3 group">
                 <div className="w-10 h-10 bg-[#00b140] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Mail className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <div className="font-medium text-white">info@dreieich-pflege.de</div>
+                  <div className="text-sm text-emerald-100">E-Mail</div>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3 group">
+                <div className="w-10 h-10 bg-[#00b140] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div>

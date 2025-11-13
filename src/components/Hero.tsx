@@ -185,7 +185,7 @@ Qualität ist              </span>
           <div className="grid grid-cols-3 gap-6 pt-12 border-t border-white/30">
             {[
               { icon: <Home className="w-6 h-6 text-white" />, title: "Wie Zuhause", desc: "Betreuung in vertrauter Umgebung" },
-              { icon: <Clock className="w-6 h-6 text-white" />, title: "24/7 Für Sie da", desc: "Rund um die Uhr Betreuung" },
+              { icon: <Clock className="w-6 h-6 text-white" />, title: "24/7 Für Sie da", desc: "Rund um die Uhr Erreichbar" },
               { icon: <Users className="w-6 h-6 text-white" />, title: "Multikulturell", desc: "Vielfältiges Betreuerteam" },
             ].map((item, i) => (
               <motion.div
@@ -249,7 +249,7 @@ Qualität ist              </span>
             <div className="grid grid-cols-1 gap-3 w-full">
               {[
                 { icon: <Home className="w-5 h-5 text-white" />, title: "Wie Zuhause", desc: "Betreuung in vertrauter Umgebung" },
-                { icon: <Clock className="w-5 h-5 text-white" />, title: "24/7 Für Sie da", desc: "Rund um die Uhr Betreuung" },
+                { icon: <Clock className="w-5 h-5 text-white" />, title: "24/7 Für Sie da123", desc: "Rund um die Uhr Erreichbar" },
                 { icon: <Users className="w-5 h-5 text-white" />, title: "Multikulturell", desc: "Vielfältiges Betreuerteam" },
               ].map((item, i) => (
                 <motion.div

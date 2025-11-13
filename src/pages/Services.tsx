@@ -1,13 +1,35 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, Users, Clock, Stethoscope, Utensils, Activity, Shield, Home, Brain, Dumbbell, Music, Palette } from "lucide-react";
+import {
+  Heart,
+  Users,
+  Clock,
+  Stethoscope,
+  Utensils,
+  Activity,
+  Shield,
+  Home,
+  Brain,
+  Dumbbell,
+  Music,
+  Palette,
+} from "lucide-react";
 import diningImage from "@/assets/food.jpeg";
 import rehabImage from "@/assets/therapy.jpeg";
 import activitiesImage from "@/assets/daily_activity.jpeg";
 import outdoor from "@/assets/care-for-the-elderly-6960542_1920.jpg";
 import holdingHand from "@/assets/holdHand.jpg";
+// import newhero from "@/assets/newhero4.jpeg";
+// import newhero from "@/assets/service3.jpeg";
+import newhero from "@/assets/female-nurse-taking-care-elderly-person.jpg";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
@@ -17,80 +39,77 @@ const services = [
   {
     icon: Heart,
     title: "Persönliche Pflege",
-    description: "Individuelle Pflegepläne, die auf die einzigartigen Bedürfnisse und Vorlieben jedes Bewohners zugeschnitten sind.",
-    details: ["Tägliche Gesundheitsüberwachung", "Medikamentenverwaltung", "Hilfe bei der persönlichen Hygiene", "Mobilitätsunterstützung"]
+    description:
+      "Individuelle Pflegepläne, die auf die einzigartigen Bedürfnisse und Vorlieben jedes Bewohners zugeschnitten sind.",
+    details: [
+      "Tägliche Gesundheitsüberwachung",
+      "Medikamentenverwaltung",
+      "Hilfe bei der persönlichen Hygiene",
+      "Mobilitätsunterstützung",
+    ],
   },
   {
     icon: Stethoscope,
     title: "Medizinische Unterstützung",
-    description: "24/7 Pflege mit medizinischem Fachpersonal vor Ort und regelmäßiger Gesundheitsüberwachung.",
-    details: ["Lizenzierte Pflegekräfte", "Regelmäßige Gesundheitsbewertungen", "Notfallreaktion", "Arztkoordination"]
+    description:
+      "24/7 Pflege mit medizinischem Fachpersonal vor Ort und regelmäßiger Gesundheitsüberwachung.",
+    details: [
+      "Lizenzierte Pflegekräfte",
+      "Regelmäßige Gesundheitsbewertungen",
+      "Notfallreaktion",
+      "Arztkoordination",
+    ],
   },
   {
     icon: Utensils,
     title: "Nahrhafte Verpflegung",
-    description: "Koch-zubereitete Mahlzeiten mit diätetischen Anpassungen und flexiblen Essenszeiten.",
-    details: ["Drei tägliche Mahlzeiten plus Snacks", "Besondere Ernährungsbedürfnisse", "Frische, lokale Zutaten", "Soziale Essenserfahrung"]
+    description:
+      "Koch-zubereitete Mahlzeiten mit diätetischen Anpassungen und flexiblen Essenszeiten.",
+    details: [
+      "Drei tägliche Mahlzeiten plus Snacks",
+      "Besondere Ernährungsbedürfnisse",
+      "Frische, lokale Zutaten",
+      "Soziale Essenserfahrung",
+    ],
   },
   {
     icon: Activity,
     title: "Engagierende Aktivitäten",
-    description: "Soziale Programme, Fitnesskurse und Freizeitaktivitäten zur Förderung des Wohlbefindens.",
-    details: ["Tägliche Aktivitätsprogramme", "Bewegungsklassen", "Kunst und Handwerk", "Live-Unterhaltung"]
+    description:
+      "Soziale Programme, Fitnesskurse und Freizeitaktivitäten zur Förderung des Wohlbefindens.",
+    details: [
+      "Tägliche Aktivitätsprogramme",
+      "Bewegungsklassen",
+      "Kunst und Handwerk",
+      "Live-Unterhaltung",
+    ],
   },
   {
     icon: Users,
     title: "Familienunterstützung",
-    description: "Offene Kommunikation und familiäre Beteiligung an Pflegeentscheidungen und Aktivitäten.",
-    details: ["Regelmäßige Familientreffen", "Pflegeplan-Updates", "Flexible Besuchszeiten", "Familienveranstaltungen"]
+    description:
+      "Offene Kommunikation und familiäre Beteiligung an Pflegeentscheidungen und Aktivitäten.",
+    details: [
+      "Regelmäßige Familientreffen",
+      "Pflegeplan-Updates",
+      "Flexible Besuchszeiten",
+      "Familienveranstaltungen",
+    ],
   },
   {
     icon: Clock,
     title: "Verhinderungspflege",
     description: "Kurzzeitpflege-Dienste zur Entlastung von Familienpflegern.",
-    details: ["Tägliche oder wöchentliche Aufenthalte", "Notfall-Verhinderungspflege", "Probeaufenthalte verfügbar", "Umfassende Bewertungen"]
+    details: [
+      "Tägliche oder wöchentliche Aufenthalte",
+      "Notfall-Verhinderungspflege",
+      "Probeaufenthalte verfügbar",
+      "Umfassende Bewertungen",
+    ],
   },
 ];
 
 const specialtyServices = [
-  {
-    icon: Heart,
-    title: "Hauspflege (SGB XI und XII Bereich)",
-    description: "Leistungen die bei festgestellter Pflegebedürftigkeit von uns und direkt mit den Pflegekassen oder den Sozialämtern abgerechnet werden:",
-    features: [
-      "Große Körperpflege z.B. Baden/Duschen",
-      "Teilwaschung",
-      "Ernährung",
-      "Mobilität",
-      "Hilfestellung bei Ausscheidung",
-      "Hilfe bei der Ernährung",
-      "Einkaufen, Hilfe im Haushalt"
-    ]
-  },
-  {
-    icon: Users,
-    title: "Entlastungsleistungen (§45b SGB XI)",
-    description: "Wir bieten zusätzliche Betreuungsleistungen an z.B.:",
-    features: [
-      "Spaziergänge",
-      "Gespräche",
-      "Vorlesen",
-      "Biographiearbeit",
-      "Begleitung bei Veranstaltungen",
-      "Begleitung bei Arztbesuchen"
-    ]
-  },
-  {
-    icon: Shield,
-    title: "Beratungseinsätze (§37 Abs. 3 SGB XI)",
-    description: "Wir führen für Sie Beratungsbesuche bei Geldleistung der Pflegeversicherung durch:",
-    features: [
-      "Vierteljährliche Beratungsbesuche",
-      "Halbjährliche Beratungsbesuche",
-      "Individuelle Pflegeberatung",
-      "Unterstützung bei Anträgen"
-    ]
-  },
   {
     icon: Stethoscope,
     title: "Häusliche Krankenpflege / med. Versorgung (SGB V Bereich)",
@@ -102,9 +121,53 @@ const specialtyServices = [
       "Insulin Injektion",
       "Vitalzeichen Kontrolle und Überwachung",
       "Blutzucker-, Blutdruck-, Pulsmessung",
-      "An- Ausziehen von Kompressionsstrümpfen"
-    ]
-  }
+      "An- Ausziehen von Kompressionsstrümpfen",
+    ],
+  },
+  {
+    icon: Heart,
+    title: "Pflegeriche Versorgung (SGB XI und XII Bereich)",
+    description:
+      "Leistungen die bei festgestellter Pflegebedürftigkeit von uns und direkt mit den Pflegekassen oder den Sozialämtern abgerechnet werden:",
+    features: [
+      "Große Körperpflege z.B. Baden/Duschen",
+      "Teilwaschung",
+      "Ernährung",
+      "Mobilität",
+      "Hilfestellung bei Ausscheidung",
+      "Hilfe bei der Ernährung",
+      "Einkaufen, Hilfe im Haushalt",
+    ],
+  },
+  {
+    icon: Users,
+    title: "Entlastungsleistungen (§45b SGB XI)",
+    description: "Wir bieten zusätzliche Betreuungsleistungen an z.B.:",
+    features: [
+      "Spaziergänge",
+      "Gespräche",
+      "Vorlesen",
+      "Biographiearbeit",
+      "Begleitung bei Veranstaltungen",
+      "Begleitung bei Arztbesuchen",
+      "Hauswirtschaft",
+    ],
+  },
+  {
+    icon: Shield,
+    title: "Beratungseinsätze (§37 Abs. 3 SGB XI)",
+    description:
+      "Wir führen für Sie Beratungsbesuche bei Geldleistung der Pflegeversicherung durch:",
+    features: [
+      "Vierteljährliche Beratungsbesuche",
+      "Halbjährliche Beratungsbesuche",
+      "Individuelle Pflegeberatung",
+      "Unterstützung bei Anträgen",
+      "Dokumentation und Nachweisführung",
+      "Qualitätssicherung",
+      "Beratung zu Pflegehilfsmitteln",
+    ],
+  },
 ];
 
 const Services = () => {
@@ -112,7 +175,7 @@ const Services = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"]
+    offset: ["start start", "end end"],
   });
 
   const heroRef = useRef(null);
@@ -120,13 +183,22 @@ const Services = () => {
   const isMobile = useIsMobile();
 
   const servicesRef = useRef(null);
-  const isServicesInView = useInView(servicesRef, { once: true, margin: "-50px" });
+  const isServicesInView = useInView(servicesRef, {
+    once: true,
+    margin: "-50px",
+  });
 
   const specialtyRef = useRef(null);
-  const isSpecialtyInView = useInView(specialtyRef, { once: true, margin: "-50px" });
+  const isSpecialtyInView = useInView(specialtyRef, {
+    once: true,
+    margin: "-50px",
+  });
 
   const highlightsRef = useRef(null);
-  const isHighlightsInView = useInView(highlightsRef, { once: true, margin: "-50px" });
+  const isHighlightsInView = useInView(highlightsRef, {
+    once: true,
+    margin: "-50px",
+  });
 
   const ctaRef = useRef(null);
   const isCtaInView = useInView(ctaRef, { once: true, margin: "-50px" });
@@ -135,35 +207,35 @@ const Services = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const handleContactClick = () => {
-    navigate('/contact');
+    navigate("/contact");
   };
 
   return (
     <div className="min-h-screen font-montserrat" ref={containerRef}>
       <Header />
-      
+
       {/* Hero Section */}
-      <section 
-        className="py-16 md:py-20 bg-gradient-to-br from-[#00b140] to-[#00b140]/90 text-white relative overflow-hidden" 
+      <section
+        className="py-16 md:py-20 bg-gradient-to-br from-[#00b140] to-[#00b140]/90 text-white relative overflow-hidden"
         style={{
           backgroundImage: `url(${outdoor})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center left',
-          backgroundRepeat: 'no-repeat',
-          minHeight: '40vh',
-          filter: 'brightness(1.1)',
+          backgroundSize: "cover",
+          backgroundPosition: "center left",
+          backgroundRepeat: "no-repeat",
+          minHeight: "40vh",
+          filter: "brightness(1.1)",
         }}
       >
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/50"></div>
-        
-        <motion.div 
+
+        <motion.div
           className="absolute inset-0 bg-[#00b140]/5"
           style={{ y }}
         ></motion.div>
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10 flex items-center justify-center py-12 md:py-20">
           <div className="max-w-4xl">
-            <motion.h1 
+            <motion.h1
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-white drop-shadow-lg leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -171,15 +243,16 @@ const Services = () => {
             >
               Umfassende Pflegedienste
             </motion.h1>
-            <motion.p 
+            <motion.p
               className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mx-auto leading-relaxed drop-shadow-md font-medium px-4 sm:px-0"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Wir bieten ein vollständiges Spektrum an Dienstleistungen, die darauf ausgerichtet sind, 
-              das körperliche, emotionale und soziale Wohlbefinden unserer Bewohner mit personalisierten 
-              Pflegeplänen zu unterstützen.
+              Wir bieten ein vollständiges Spektrum an Dienstleistungen, die
+              darauf ausgerichtet sind, das körperliche, emotionale und soziale
+              Wohlbefinden unserer Bewohner mit personalisierten Pflegeplänen zu
+              unterstützen.
             </motion.p>
           </div>
         </div>
@@ -275,85 +348,94 @@ const Services = () => {
       </motion.section> */}
 
       {/* Specialty Services */}
-      <motion.section 
+      <motion.section
         ref={specialtyRef}
         initial={{ opacity: 0 }}
         animate={isSpecialtyInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8 }}
         className="py-12 md:py-20 bg-background"
-        style={{ filter: 'brightness(1.05)' }}
+        style={{ filter: "brightness(1.05)" }}
       >
         <div className="container mx-auto px-4 sm:px-6">
-          <motion.div 
+          <motion.div
             className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={isSpecialtyInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4">
-              Kernpflegedienste
+              Unsere pflegeleistunge
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
               {/* Unsere grundlegenden Dienstleistungen bilden die Grundlage für emphatische Seniorenpflege */}
-
-              Unsere Pflegeleistungen nach SGB V, XI und XII
+              Nach SGB V, XI und XII
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {specialtyServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isSpecialtyInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ 
-                  duration: 0.6, 
-                  delay: 0.3 + (index * 0.15),
-                  ease: "easeOut"
+                transition={{
+                  duration: 0.6,
+                  delay: 0.3 + index * 0.15,
+                  ease: "easeOut",
                 }}
-                whileHover={{ 
+                whileHover={{
                   y: -5,
                   scale: 1.02,
-                  transition: { duration: 0.3 }
+                  transition: { duration: 0.3 },
                 }}
                 className="h-full"
               >
-                <Card className="group hover:shadow-card transition-all duration-300 border-border/50 h-full bg-gradient-to-br from-white to-gray-50">
+                <Card className="group hover:shadow-card transition-all duration-300 border-2 border-[#00b140]/15 hover:border-[#00b140]/40 h-full bg-gradient-to-br from-white to-gray-50">
                   <CardHeader className="px-4 sm:px-6 pt-6">
                     <div className="flex items-center space-x-3 md:space-x-4">
-                      <motion.div 
+                      <motion.div
                         className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-[#00b140] rounded-lg flex items-center justify-center flex-shrink-0"
-                        whileHover={{ 
+                        whileHover={{
                           scale: 1.1,
                           rotate: 5,
-                          transition: { duration: 0.3 }
+                          transition: { duration: 0.3 },
                         }}
                       >
                         <service.icon className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
                       </motion.div>
                       <div>
-                        <CardTitle className="text-xl sm:text-2xl md:text-2xl text-foreground">{service.title}</CardTitle>
+                        <CardTitle className="text-xl sm:text-2xl md:text-2xl text-foreground">
+                          {service.title}
+                        </CardTitle>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="px-4 sm:px-6 pb-6">
-                    <p className="text-muted-foreground leading-relaxed mb-3 md:mb-4 text-sm sm:text-base">{service.description}</p>
+                    <p className="text-muted-foreground leading-relaxed mb-3 md:mb-4 text-sm sm:text-base">
+                      {service.description}
+                    </p>
                     <div className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
-                        <motion.div 
-                          key={featureIndex} 
+                        <motion.div
+                          key={featureIndex}
                           className="flex items-start space-x-2 text-xs sm:text-sm"
                           initial={{ opacity: 0, y: 20 }}
-                          animate={isSpecialtyInView ? { opacity: 1, y: 0 } : {}}
-                          transition={{ 
-                            duration: 0.4, 
-                            delay: 0.4 + (index * 0.15) + (featureIndex * 0.08)
+                          animate={
+                            isSpecialtyInView ? { opacity: 1, y: 0 } : {}
+                          }
+                          transition={{
+                            duration: 0.4,
+                            delay: 0.4 + index * 0.15 + featureIndex * 0.08,
                           }}
                         >
-                          <motion.div 
+                          <motion.div
                             className="w-1.5 h-1.5 bg-[#00b140] rounded-full mt-1 flex-shrink-0"
                             animate={{ scale: [1, 1.3, 1] }}
-                            transition={{ duration: 2, repeat: Infinity, delay: featureIndex * 0.3 }}
+                            transition={{
+                              duration: 2,
+                              repeat: Infinity,
+                              delay: featureIndex * 0.3,
+                            }}
                           ></motion.div>
                           <span className="text-foreground">{feature}</span>
                         </motion.div>
@@ -368,95 +450,111 @@ const Services = () => {
       </motion.section>
 
       {/* Service Highlights */}
-      <motion.section 
+      <motion.section
         ref={highlightsRef}
         initial={{ opacity: 0 }}
         animate={isHighlightsInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8 }}
         className="py-12 md:py-20 bg-gradient-to-b from-secondary/30 to-background"
-        style={{ filter: 'brightness(1.05)' }}
+        style={{ filter: "brightness(1.05)" }}
       >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="space-y-12 md:space-y-20">
             {/* Dining Services */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
               initial={{ opacity: 0, y: 50 }}
               animate={isHighlightsInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <motion.div 
+              <motion.div
                 className="relative order-1 lg:order-2"
                 initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
-                animate={isHighlightsInView ? { opacity: 1, scale: 1, rotateY: 0 } : {}}
+                animate={
+                  isHighlightsInView ? { opacity: 1, scale: 1, rotateY: 0 } : {}
+                }
                 transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
-                  transition: { duration: 0.4 }
+                  transition: { duration: 0.4 },
                 }}
               >
-                <motion.div 
+                {/* <motion.div
                   className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 md:-top-4 md:-left-4 w-full h-full bg-gradient-to-br from-[#00b140]/20 to-transparent rounded-xl sm:rounded-2xl"
-                  animate={{ 
+                  animate={{
                     boxShadow: [
                       "0 0 0 rgba(0, 177, 64, 0.2)",
                       "0 0 20px rgba(0, 177, 64, 0.4)",
-                      "0 0 0 rgba(0, 177, 64, 0.2)"
-                    ]
+                      "0 0 0 rgba(0, 177, 64, 0.2)",
+                    ],
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
-                ></motion.div>
-                <img 
-                  src={diningImage} 
+                ></motion.div> */}
+                <img
+                  src={diningImage}
                   alt="Speisesaal"
-                  className="relative rounded-xl sm:rounded-2xl shadow-card w-full h-48 sm:h-64 md:h-80 object-cover"
-                  style={{ filter: 'brightness(1.1)' }}
+                  className="relative rounded-xl sm:rounded-2xl shadow-card  shadow-card w-full h-48 sm:h-64 md:h-80 object-cover"
+                  // style={{ filter: "brightness(1.1)" }}
                 />
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="space-y-4 md:space-y-6 order-2 lg:order-1"
-                initial={{ opacity: 0}}
+                initial={{ opacity: 0 }}
                 animate={isHighlightsInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <motion.div 
+                <motion.div
                   className="flex items-center space-x-3"
                   initial={{ opacity: 0 }}
                   animate={isHighlightsInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.6 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="w-7 h-7 sm:w-8 sm:h-8 bg-[#00b140] rounded-full flex items-center justify-center flex-shrink-0"
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.1,
                       rotate: 5,
-                      transition: { duration: 0.3 }
+                      transition: { duration: 0.3 },
                     }}
                   >
                     <Utensils className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                   </motion.div>
-                  <span className="text-[#00b140] font-semibold text-sm sm:text-base">Kulinarische Exzellenz</span>
+                  <span className="text-[#00b140] font-semibold text-sm sm:text-base">
+                    {/* Ernährung & Mahlzeitenversorgung */}
+                    Pflege- & Unterstützungsangebote
+                  </span>
                 </motion.div>
-                <motion.h3 
+                <motion.h3
                   className="text-2xl sm:text-3xl md:text-3xl font-bold text-foreground"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isHighlightsInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.8 }}
                 >
-                  Gourmet-Dining-Erlebnis
+                  {/* Individuelle & ausgewogene Verpflegung */}
+                  Individuelle Versorgung & Alltagsbegleitung
                 </motion.h3>
-                <motion.p 
+                <motion.p
                   className="text-base sm:text-lg text-muted-foreground leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isHighlightsInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 1.0 }}
                 >
-                  Unser professionelles Küchenteam erstellt köstliche, ernährungsphysiologisch ausgewogene Mahlzeiten 
-                  mit frischen, lokal bezogenen Zutaten. Besondere Ernährungsbedürfnisse und Vorlieben 
-                  werden sorgfältig berücksichtigt.
+                  {/* Unser professionelles Küchenteam erstellt köstliche,
+                  ernährungsphysiologisch ausgewogene Mahlzeiten mit frischen,
+                  lokal bezogenen Zutaten. Besondere Ernährungsbedürfnisse und
+                  Vorlieben werden sorgfältig berücksichtigt. */}
+                  {/* Wir unterstützen unsere Kund*innen bei der täglichen Ernährung
+                  und stellen sicher, dass Mahlzeiten bedarfsgerecht, ausgewogen
+                  und nach individuellen Vorlieben oder ärztlichen Vorgaben
+                  zubereitet werden. */}
+                  Unsere umfassenden Pflege- und Betreuungsleistungen
+                  unterstützen Pflegebedürftige in allen Bereichen des täglichen
+                  Lebens. Von der Grundpflege über medizinische
+                  Behandlungspflege bis hin zu unterstützenden
+                  Entlastungsangeboten bieten wir verlässliche Hilfe.
                 </motion.p>
-                <motion.ul 
+                {/* <motion.ul
                   className="space-y-2 md:space-y-3"
                   initial={{ opacity: 0 }}
                   animate={isHighlightsInView ? { opacity: 1 } : {}}
@@ -464,170 +562,197 @@ const Services = () => {
                 >
                   {[
                     "Täglich zubereitete Menüs vom Koch",
-                    "Besondere Diätanpassungen", 
-                    "Flexible Essenszeiten"
+                    "Besondere Diätanpassungen",
+                    "Flexible Essenszeiten",
                   ].map((item, index) => (
-                    <motion.li 
+                    <motion.li
                       key={index}
                       className="flex items-start space-x-3"
                       initial={{ opacity: 0 }}
                       animate={isHighlightsInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.4, delay: 1.4 + (index * 0.15) }}
+                      transition={{ duration: 0.4, delay: 1.4 + index * 0.15 }}
                     >
-                      <motion.div 
+                      <motion.div
                         className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#00b140] rounded-full mt-1 flex-shrink-0"
                         animate={{ scale: [1, 1.3, 1] }}
-                        transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          delay: index * 0.2,
+                        }}
                       ></motion.div>
-                      <span className="text-foreground text-sm sm:text-base">{item}</span>
+                      <span className="text-foreground text-sm sm:text-base">
+                        {item}
+                      </span>
                     </motion.li>
                   ))}
-                </motion.ul>
+                </motion.ul> */}
               </motion.div>
             </motion.div>
 
             {/* Rehabilitation */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
               initial={{ opacity: 0, y: 50 }}
               animate={isHighlightsInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <motion.div 
+              <motion.div
                 className="relative order-1 lg:order-1"
                 initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
-                animate={isHighlightsInView ? { opacity: 1, scale: 1, rotateY: 0 } : {}}
+                animate={
+                  isHighlightsInView ? { opacity: 1, scale: 1, rotateY: 0 } : {}
+                }
                 transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
-                  transition: { duration: 0.4 }
+                  transition: { duration: 0.4 },
                 }}
               >
-                <motion.div 
+                {/* <motion.div
                   className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 md:-top-4 md:-right-4 w-full h-full bg-gradient-to-br from-[#00b140]/20 to-transparent rounded-xl sm:rounded-2xl"
-                  animate={{ 
+                  animate={{
                     boxShadow: [
                       "0 0 0 rgba(0, 177, 64, 0.2)",
                       "0 0 20px rgba(0, 177, 64, 0.4)",
-                      "0 0 0 rgba(0, 177, 64, 0.2)"
-                    ]
+                      "0 0 0 rgba(0, 177, 64, 0.2)",
+                    ],
                   }}
                   transition={{ duration: 3, repeat: Infinity, delay: 0.8 }}
-                ></motion.div>
-                <img 
-                  src={rehabImage} 
+                ></motion.div> */}
+                <img
+                  src={newhero}
                   alt="Rehabilitationsraum"
                   className="relative rounded-xl sm:rounded-2xl shadow-card w-full h-48 sm:h-64 md:h-80 object-cover"
-                  style={{ filter: 'brightness(1.1)' }}
+                  style={{ objectPosition: "70% 17%" }}
+                  // Adjust the second value (20%) to control vertical position:
+                  // 0% = top, 50% = center, 100% = bottom
                 />
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="space-y-4 md:space-y-6 order-2 lg:order-2"
-                initial={{ opacity: 0}}
+                initial={{ opacity: 0 }}
                 animate={isHighlightsInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                <motion.div 
+                <motion.div
                   className="flex items-center space-x-3"
                   initial={{ opacity: 0 }}
                   animate={isHighlightsInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 1.0 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="w-7 h-7 sm:w-8 sm:h-8 bg-[#00b140] rounded-full flex items-center justify-center flex-shrink-0"
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.1,
                       rotate: 5,
-                      transition: { duration: 0.3 }
+                      transition: { duration: 0.3 },
                     }}
                   >
                     <Dumbbell className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                   </motion.div>
-                  <span className="text-[#00b140] font-semibold text-sm sm:text-base">Erholung & Wohlbefinden</span>
+                  <span className="text-[#00b140] font-semibold text-sm sm:text-base">
+                    {/* Erholung & Wohlbefinden */}
+                    {/* Aktivierung, Erholung & Förderung */}
+                    Betreuungs- & Entlastungsangebote
+                  </span>
                 </motion.div>
-                <motion.h3 
+                <motion.h3
                   className="text-2xl sm:text-3xl md:text-3xl font-bold text-foreground"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isHighlightsInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 1.2 }}
                 >
-                  Rehabilitation & Therapie
+                  {/* Rehabilitation & Therapie */}
+                  {/* Unterstützende Aktivitäten & Maßnahmen */}
+                  Begleitung & Unterstützung
                 </motion.h3>
-                <motion.p 
+                <motion.p
                   className="text-base sm:text-lg text-muted-foreground leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isHighlightsInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 1.4 }}
                 >
-                  Unser modernes Rehabilitationszentrum bietet umfassende Therapiedienste 
-                  zur Erhaltung der Mobilität, Erholung von Verletzungen und Verbesserung 
-                  der Lebensqualität.
+                  {/* Unser modernes Rehabilitationszentrum bietet umfassende
+                  Therapiedienste zur Erhaltung der Mobilität, Erholung von
+                  Verletzungen und Verbesserung der Lebensqualität. */}
+                  {/* Zur Förderung der Mobilität, Erholung und des allgemeinen
+                  Wohlbefindens bieten wir verschiedene aktivierende und
+                  begleitende Leistungen an, welche die Selbstständigkeit und
+                  Lebensqualität stärken. */}
+                  Unsere zusätzlichen Betreuungsleistungen schaffen Entlastung
+                  für Angehörige und fördern zugleich das emotionale und soziale
+                  Wohlbefinden der Pflegebedürftigen.
                 </motion.p>
               </motion.div>
             </motion.div>
 
             {/* Activities */}
-            <motion.div 
+            <motion.div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
               initial={{ opacity: 0, y: 50 }}
               animate={isHighlightsInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <motion.div 
+              <motion.div
                 className="relative order-1 lg:order-2"
                 initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
-                animate={isHighlightsInView ? { opacity: 1, scale: 1, rotateY: 0 } : {}}
+                animate={
+                  isHighlightsInView ? { opacity: 1, scale: 1, rotateY: 0 } : {}
+                }
                 transition={{ duration: 0.8, delay: 1.0, ease: "easeOut" }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
-                  transition: { duration: 0.4 }
+                  transition: { duration: 0.4 },
                 }}
               >
-                <motion.div 
+                {/* <motion.div
                   className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 md:-top-4 md:-left-4 w-full h-full bg-gradient-to-br from-[#00b140]/20 to-transparent rounded-xl sm:rounded-2xl"
-                  animate={{ 
+                  animate={{
                     boxShadow: [
                       "0 0 0 rgba(0, 177, 64, 0.2)",
                       "0 0 20px rgba(0, 177, 64, 0.4)",
-                      "0 0 0 rgba(0, 177, 64, 0.2)"
-                    ]
+                      "0 0 0 rgba(0, 177, 64, 0.2)",
+                    ],
                   }}
                   transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
-                ></motion.div>
-                <img 
-                  src={activitiesImage} 
+                ></motion.div> */}
+                <img
+                  src={activitiesImage}
                   alt="Aktivitätsprogramme"
                   className="relative rounded-xl sm:rounded-2xl shadow-card w-full h-48 sm:h-64 md:h-80 object-cover"
-                  style={{ filter: 'brightness(1.1)' }}
+                  style={{ filter: "brightness(1.1)" }}
                 />
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="space-y-4 md:space-y-6 order-2 lg:order-1"
-                initial={{ opacity: 0}}
+                initial={{ opacity: 0 }}
                 animate={isHighlightsInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                <motion.div 
+                <motion.div
                   className="flex items-center space-x-3"
-                  initial={{ opacity: 0}}
+                  initial={{ opacity: 0 }}
                   animate={isHighlightsInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 1.0 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="w-7 h-7 sm:w-8 sm:h-8 bg-[#00b140] rounded-full flex items-center justify-center flex-shrink-0"
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.1,
                       rotate: 5,
-                      transition: { duration: 0.3 }
+                      transition: { duration: 0.3 },
                     }}
                   >
                     <Activity className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                   </motion.div>
-                  <span className="text-[#00b140] font-semibold text-sm sm:text-base">Bereicherungsprogramme</span>
+                  <span className="text-[#00b140] font-semibold text-sm sm:text-base">
+                    Bereicherungsprogramme
+                  </span>
                 </motion.div>
-                <motion.h3 
+                <motion.h3
                   className="text-2xl sm:text-3xl md:text-3xl font-bold text-foreground"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isHighlightsInView ? { opacity: 1, y: 0 } : {}}
@@ -635,49 +760,52 @@ const Services = () => {
                 >
                   Tägliche Aktivitäten & Programme
                 </motion.h3>
-                <motion.p 
+                <motion.p
                   className="text-base sm:text-lg text-muted-foreground leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isHighlightsInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 1.4 }}
                 >
-                  Unser vielfältiges Aktivitätsprogramm fördert soziale Beteiligung, kognitive Stimulation 
-                  und persönliche Erfüllung durch eine Vielzahl von Freizeit- und Bildungsmöglichkeiten.
+                  Unser vielfältiges Aktivitätsprogramm fördert soziale
+                  Beteiligung, kognitive Stimulation und persönliche Erfüllung
+                  durch eine Vielzahl von Freizeit- und Bildungsmöglichkeiten.
                 </motion.p>
-                <motion.div 
+                <motion.div
                   className="grid grid-cols-3 gap-3 sm:gap-4"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isHighlightsInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 1.6 }}
                 >
                   {[
-                    { icon: Music, label: "Musiktherapie" },
-                    { icon: Palette, label: "Kunstkurse" },
-                    { icon: Users, label: "Soziale Events" }
+                    // { icon: Music, label: "Musiktherapie" },
+                    // { icon: Palette, label: "Kunstkurse" },
+                    // { icon: Users, label: "Soziale Events" },
                   ].map((activity, index) => (
-                    <motion.div 
+                    <motion.div
                       key={index}
                       className="text-center"
                       initial={{ opacity: 0, y: 20 }}
                       animate={isHighlightsInView ? { opacity: 1, y: 0 } : {}}
-                      transition={{ duration: 0.4, delay: 1.8 + (index * 0.2) }}
-                      whileHover={{ 
+                      transition={{ duration: 0.4, delay: 1.8 + index * 0.2 }}
+                      whileHover={{
                         y: -5,
                         scale: 1.05,
-                        transition: { duration: 0.3 }
+                        transition: { duration: 0.3 },
                       }}
                     >
-                      <motion.div 
+                      <motion.div
                         className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 mx-auto mb-2 bg-[#00b140] rounded-lg flex items-center justify-center"
-                        whileHover={{ 
+                        whileHover={{
                           scale: 1.1,
                           rotate: 5,
-                          transition: { duration: 0.3 }
+                          transition: { duration: 0.3 },
                         }}
                       >
                         <activity.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
                       </motion.div>
-                      <div className="text-xs sm:text-sm text-foreground font-medium leading-tight">{activity.label}</div>
+                      <div className="text-xs sm:text-sm text-foreground font-medium leading-tight">
+                        {activity.label}
+                      </div>
                     </motion.div>
                   ))}
                 </motion.div>
@@ -688,7 +816,7 @@ const Services = () => {
       </motion.section>
 
       {/* CTA Section */}
-      <motion.section 
+      <motion.section
         ref={ctaRef}
         initial={{ opacity: 0 }}
         animate={isCtaInView ? { opacity: 1 } : {}}
@@ -696,22 +824,22 @@ const Services = () => {
         className="py-12 md:py-20 bg-gradient-to-r from-[#00b140] to-[#00b140]/90 text-white relative"
         style={{
           backgroundImage: `url(${holdingHand})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          filter: 'brightness(1.1)',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          filter: "brightness(1.1)",
         }}
       >
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/40"></div>
-        
+
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isCtaInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <motion.h2 
+            <motion.h2
               className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={isCtaInView ? { opacity: 1, y: 0 } : {}}
@@ -719,30 +847,31 @@ const Services = () => {
             >
               Bereit, mehr über unsere Dienste zu erfahren?
             </motion.h2>
-            <motion.p 
+            <motion.p
               className="text-base sm:text-lg md:text-xl text-white/95 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0"
               initial={{ opacity: 0, y: 20 }}
               animate={isCtaInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.6 }}
             >
-              Vereinbaren Sie eine persönliche Beratung, um zu besprechen, wie unsere Dienste 
-              die einzigartigen Bedürfnisse Ihres Angehörigen erfüllen können.
+              Vereinbaren Sie eine persönliche Beratung, um zu besprechen, wie
+              unsere Dienste die einzigartigen Bedürfnisse Ihres Angehörigen
+              erfüllen können.
             </motion.p>
-            <motion.div 
+            <motion.div
               className="flex justify-center"
               initial={{ opacity: 0, y: 20 }}
               animate={isCtaInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.8 }}
             >
               <motion.div
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
-                  transition: { duration: 0.3 }
+                  transition: { duration: 0.3 },
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-white text-[#00b140] hover:bg-gray-100 font-semibold border-2 border-white transition-all duration-300 shadow-lg"
                   onClick={handleContactClick}
                 >

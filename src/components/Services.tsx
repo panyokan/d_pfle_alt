@@ -6,16 +6,16 @@ import { useNavigate } from "react-router-dom";
 
 const services = [
   {
-    title: "Hauswirtschaftliche Hilfe",
-    description: "Professionelle Unterstützung bei Haushalt, Einkäufen und täglicher Organisation.",
+    title: "Behandlungpflege",
+    description: "Professionelle Behandlungspflege nach ärztlicher Verordnung.",
     icon: Home,
     color: "bg-[#00b140]",
     bgColor: "bg-gradient-to-br from-white to-gray-50",
     borderColor: "border-[#00b140]/20"
   },
   {
-    title: "Entlastungsleistungen",
-    description: "Entlastung für pflegende Angehörige durch qualifizierte Betreuung und Unterstützung.",
+    title: "Pflegeriche Versorgung",
+    description: "Umfassende pflegerische Versorgung für Ihre individuellen Bedürfnisse.",
     icon: Shield,
     color: "bg-[#00b140]",
     bgColor: "bg-gradient-to-br from-white to-gray-50",
@@ -112,7 +112,7 @@ const Services = () => {
                 <CardDescription className="text-center text-gray-600 leading-relaxed mb-4 group-hover:text-gray-700 transition-colors duration-300">
                   {service.description}
                 </CardDescription>
-                <div className="text-center">
+                {/* <div className="text-center">
                   <Button 
                     size="lg"
                     className="text-lg px-8 py-6 bg-white text-[#00b140] hover:bg-[#00b140] hover:text-white font-semibold border-2 border-[#00b140] transition-all duration-300 shadow-lg w-full group/btn relative overflow-hidden hover:shadow-xl hover:border-[#00b140]"
@@ -121,20 +121,17 @@ const Services = () => {
                       handleLearnMoreClick();
                     }}
                   >
-                    {/* Animated background on hover */}
                     <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#00b140] via-[#00a138] to-[#00b140] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></span>
                     
-                    {/* Sparkle effect */}
                     <Sparkles className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />
                     <Sparkles className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300 delay-150" />
                     
-                    {/* Button content */}
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       Mehr erfahren
                       <ArrowRight className="w-5 h-5 transform group-hover/btn:translate-x-2 transition-transform duration-300 group-hover/btn:scale-110" />
                     </span>
                   </Button>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           ))}
