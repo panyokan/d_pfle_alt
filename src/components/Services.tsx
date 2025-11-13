@@ -76,7 +76,7 @@ const Services = () => {
       }}
     > 
       {/* Enhanced overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-800/75 to-gray-900/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-900/50 via-gray-800/30 to-gray-900/30"></div>
 
       {/* Content wrapper */}
       <div className="relative container mx-auto px-6">     
