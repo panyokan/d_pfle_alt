@@ -25,14 +25,19 @@ import hero2 from "@/assets/herohero.jpeg";
 import hero3 from "@/assets/hug.jpeg";
 
 // Mobile images
-import heroMobile1 from "@/assets/newhero.jpeg";
-import heroMobile2 from "@/assets/newhero2.jpeg";
-import heroMobile3 from "@/assets/newhero4.jpeg";
+// import heroMobile1 from "@/assets/newhero.jpeg";
+// import heroMobile2 from "@/assets/newhero2.jpeg";
+// import heroMobile3 from "@/assets/newhero4.jpeg";
+import heroMobile4 from "@/assets/mobile_hero2.jpeg"
+// import heroMobile5 from "@/assets/mobile_hero3.jpeg"
+import heroMobile6 from "@/assets/mobile_hero6.jpeg"
+import heroMobile7 from "@/assets/mobile_hero7.jpeg"
+import heroMobile8 from "@/assets/mobile_hero8.jpeg"
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const desktopImages = [hero1, hero2, hero3];
-  const mobileImages = [heroMobile1, heroMobile2, heroMobile3];
+  const mobileImages = [heroMobile7, heroMobile8, heroMobile6, heroMobile4];
 
   const [currentDesktop, setCurrentDesktop] = useState(0);
   const [currentMobile, setCurrentMobile] = useState(0);
@@ -47,10 +52,10 @@ const Hero = () => {
   useEffect(() => {
     const d = setInterval(() => {
       setCurrentDesktop((p) => (p + 1) % desktopImages.length);
-    }, 2000); // Increased from 3000 to 5000ms for more time to appreciate each image
+    }, 4000); // Increased from 3000 to 5000ms for more time to appreciate each image
     const m = setInterval(() => {
       setCurrentMobile((p) => (p + 1) % mobileImages.length);
-    }, 2000); // Increased from 3000 to 5000ms for more time to appreciate each image
+    }, 4000); // Increased from 3000 to 5000ms for more time to appreciate each image
     return () => {
       clearInterval(d);
       clearInterval(m);
@@ -101,7 +106,10 @@ const Hero = () => {
             }}
           >
             {/* Made overlay lighter by reducing opacity */}
-            <div className="absolute inset-0 bg-gradient-to-b from-deep-navy/65 via-deep-navy/50 to-deep-navy/75"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/70 via-deep-navy/55 to-deep-navy/35"></div>
+
+            {/* <div className="md:hidden absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-deep-navy/10 via-deep-navy/5 to-transparent pointer-events-none"></div> */}
+            {/* <div className="absolute inset-0 bg-gradient-to-b from-deep-navy/35 via-deep-navy/20 to-deep-navy/10"></div> */}
           </motion.div>
         ))}
         {/* Mobile accent blur - made brighter */}
@@ -228,10 +236,10 @@ Qualität ist              </span>
             >
               <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight">
                 <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent animate-gradient">
-                  Mit Herz
+                  Qualität ist
                 </span>
                 <span className="block bg-gradient-to-r from-[#00b140] via-[#00d950] to-[#00b140]/80 bg-clip-text text-transparent animate-gradient">
-                  für Menschen
+                  kein zufall
                 </span>
               </h1>
               <div className="w-16 h-1 bg-gradient-to-r from-[#00b140] to-[#00b140]/80 rounded-full mx-auto"></div>
@@ -249,7 +257,7 @@ Qualität ist              </span>
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 + i * 0.1 }}
-                  className="flex items-center space-x-4 p-4 rounded-2xl bg-white/12 backdrop-blur-sm border border-white/15 hover:bg-white/18 transition-all duration-300 group"
+                  className="flex items-center space-x-4 p-4 rounded-2xl bg-white/12 border border-white/15 hover:bg-white/18 transition-all duration-300 group"
                 >
                   <div className="w-12 h-12 bg-[#00b140] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                     {item.icon}
@@ -284,7 +292,7 @@ Qualität ist              </span>
       </div>
 
       {/* Mobile Bottom Gradient */}
-      <div className="md:hidden absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-deep-navy via-deep-navy/50 to-transparent pointer-events-none"></div>
+      <div className="md:hidden absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-deep-navy/10 via-deep-navy/5 to-transparent pointer-events-none"></div>
 
       <style>{`
         @keyframes gradientMove {
