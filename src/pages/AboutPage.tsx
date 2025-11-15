@@ -14,8 +14,9 @@ import {
   Star,
 } from "lucide-react";
 import staffImage from "@/assets/healthcare-staff.jpg";
-import commonAreaImage from "@/assets/service2.jpeg";
-import hug from "@/assets/hug.jpeg";
+import commonAreaImage from "@/assets/doctor-talking-with-her-elder-patient (1).jpg";
+
+import hug from "@/assets/old-man-nursing-home-helped-by-female-doctor-take-his-medicine.jpg";
 import hug2 from "@/assets/hug2.jpeg";
 import room from "@/assets/timothy-buck-psrloDbaZc8-unsplash.jpg";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";

@@ -22,14 +22,14 @@ import {
   Music,
   Palette,
 } from "lucide-react";
-import diningImage from "@/assets/food.jpeg";
+import diningImage from "@/assets/portrait-retired-couple-with-disability-sitting-couch-looking-camera-elder-man-woman-crutches-wheelchair-accessibility-mobility-enjoying-free-time.jpg";
 import rehabImage from "@/assets/therapy.jpeg";
-import activitiesImage from "@/assets/daily_activity.jpeg";
+import activitiesImage from "@/assets/male-nurse-helping-senior-retired-disabled-woman-wheelchair-rehabilitate-using-dumbbels.jpg";
 import outdoor from "@/assets/care-for-the-elderly-6960542_1920.jpg";
 import holdingHand from "@/assets/holdHand.jpg";
 // import newhero from "@/assets/newhero4.jpeg";
 // import newhero from "@/assets/service3.jpeg";
-import newhero from "@/assets/female-nurse-taking-care-elderly-person.jpg";
+import newhero from "@/assets/indiviual_care.jpg";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
