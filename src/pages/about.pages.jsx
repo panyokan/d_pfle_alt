@@ -1,19 +1,27 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import About from "@/components/About";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Quote, Award, Users, Heart, Clock, Calendar, MapPin, Star } from "lucide-react";
-import staffImage from "@/assets/healthcare-staff.jpg";
+import { Quote, Award, Users, Heart, Clock, Calendar, Star } from "lucide-react";
 import commonAreaImage from "@/assets/service2.jpeg";
 import hug from "@/assets/hug.jpeg";
 import hug2 from "@/assets/hug2.jpeg";
-import room from "@/assets/timothy-buck-psrloDbaZc8-unsplash.jpg"
+import room from "@/assets/timothy-buck-psrloDc8-unsplash.jpg"
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-const AboutPage = () => {
+// SEO Metadata - This is crucial for vite-plugin-ssr
+export { Page };
+export const documentProps = {
+  title: "Über Uns | Pflegedienst Dreieich - Unser Team & Werte",
+  description: "Erfahren Sie mehr über Pflegedienst Dreieich: Unser erfahrenes Team, unsere Werte und unsere Mission in der ambulanten Pflege in Dreieich und Umgebung.",
+  keywords: "Pflegedienst Dreieich, Über uns, Pflegeteam, ambulante Pflege, Seniorenbetreuung, Pflegewerte, Pflegemission, Dreieich, Neu-Isenburg, Dietzenbach",
+  canonical: "/about",
+  ogImage: "/og-about.jpg"
+};
+
+function Page() {
   const navigate = useNavigate();
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -43,33 +51,18 @@ const AboutPage = () => {
     navigate('/contact');
   };
 
-  const timeline = [
-    {
-      year: "1999",
-      title: "Gegründet",
-      description: "Pflegedienst Dreieich öffnete seine Türen mit der Vision, außergewöhnliche Seniorenpflege zu bieten"
-    },
-    {
-      year: "2005",
-      title: "Erweiterung",
-      description: "Gedächtnispflege-Flügel hinzugefügt und Rehabilitationsdienste erweitert"
-    },
-    {
-      year: "2012",
-      title: "Anerkennung",
-      description: "Staatliche Zertifizierung und 5-Sterne-Qualitätsbewertung erhalten"
-    },
-    {
-      year: "2018",
-      title: "Innovation",
-      description: "Implementierung modernster Pflegetechnologien und Familienkommunikationssysteme"
-    },
-    {
-      year: "2024",
-      title: "Exzellenz",
-      description: "25 Jahre mitfühlende Pflege und Gemeinschaftsdienst feiern"
+  // Structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Über Pflegedienst Dreieich",
+    "description": "Ambulanter Pflegedienst in Dreieich mit erfahrenem Team und ganzheitlichem Pflegeansatz",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pflegedienst Dreieich",
+      "description": "Ambulanter Pflegedienst in Dreieich und Umgebung"
     }
-  ];
+  };
 
   const testimonials = [
     {
@@ -94,9 +87,15 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen font-montserrat" ref={containerRef}>
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
       <Header />
       
-      {/* Hero Section */}
+      {/* Hero Section with proper H1 */}
       <section 
         className="py-16 md:py-20 bg-gradient-to-br from-[#00b140] to-[#00b140]/90 text-white relative overflow-hidden" 
         style={{
@@ -122,7 +121,7 @@ const AboutPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Über uns
+              Über den Pflegedienst Dreieich
             </motion.h1>
             <motion.p 
               className="text-lg sm:text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed drop-shadow-md font-medium px-4"
@@ -130,14 +129,13 @@ const AboutPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Unser ambulanter Pflegedienst mit Sitz in Dreieich, bietet seine Dienstleitungen auch in den umliegenden Kommunen an.
-              Hierzu zählen z.B. Neu-Isenburg, Dietzenbach, Langen und Egelsbach.
+              Unser ambulanter Pflegedienst mit Sitz in Dreieich bietet professionelle Pflegedienstleistungen auch in den umliegenden Kommunen wie Neu-Isenburg, Dietzenbach, Langen und Egelsbach an.
             </motion.p>
           </div>
         </div>
       </section>
 
-      {/* Mission & Values */}
+      {/* Mission & Values Section */}
       <motion.section 
         ref={missionRef}
         initial={{ opacity: 0 }}
@@ -160,11 +158,11 @@ const AboutPage = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 md:mb-6">
-                  Unsere Mission & Werte
+                  Unsere Mission & Werte in der Pflege
                 </h2>
                 <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 md:mb-6">
-                  Wir glauben, dass jeder Senior mit Würde leben sollte, umgeben von 
-                  Pflege, die seine Lebensgeschichte ehrt und seine individuelle Reise unterstützt.
+                  Beim Pflegedienst Dreieich glauben wir, dass jeder Senior mit Würde leben sollte, umgeben von 
+                  Pflege, die seine Lebensgeschichte ehrt und seine individuelle Reise unterstützt. Unsere ambulanten Pflegedienstleistungen basieren auf Respekt und Empathie.
                 </p>
               </motion.div>
               
@@ -172,20 +170,20 @@ const AboutPage = () => {
                 {[
                   { 
                     icon: Heart, 
-                    title: "Mitgefühl", 
-                    description: "Jede Interaktion wird von Empathie, Freundlichkeit und echter Fürsorge für das Wohlbefinden unserer Bewohner geleitet.",
+                    title: "Mitgefühl in der Pflege", 
+                    description: "Jede Interaktion wird von Empathie, Freundlichkeit und echter Fürsorge für das Wohlbefinden unserer Pflegebedürftigen geleitet.",
                     iconBg: "bg-[#00b140]"
                   },
                   { 
                     icon: Users, 
-                    title: "Gemeinschaft", 
-                    description: "Wir fördern bedeutungsvolle Verbindungen und schaffen eine Umgebung, in der sich jeder zugehörig fühlt.",
+                    title: "Gemeinschaft & Integration", 
+                    description: "Wir fördern bedeutungsvolle Verbindungen und schaffen eine Umgebung, in der sich jeder Pflegebedürftige zugehörig fühlt.",
                     iconBg: "bg-[#00b140]"
                   },
                   { 
                     icon: Award, 
-                    title: "Exzellenz", 
-                    description: "Wir streben kontinuierlich nach den höchsten Standards in Pflege, Sicherheit und Servicequalität.",
+                    title: "Pflege-Exzellenz", 
+                    description: "Wir streben kontinuierlich nach den höchsten Standards in ambulanter Pflege, Sicherheit und Servicequalität in Dreieich.",
                     iconBg: "bg-[#00b140]"
                   }
                 ].map((value, index) => (
@@ -250,7 +248,7 @@ const AboutPage = () => {
               ></motion.div>
               <img 
                 src={hug2} 
-                alt="Gesundheitspersonal"
+                alt="Erfahrenes Pflegeteam des Pflegedienst Dreieich bei der Betreuung"
                 className="relative rounded-xl sm:rounded-2xl shadow-card w-full h-64 sm:h-80 md:h-96 object-cover"
                 style={{ filter: 'brightness(1.1)' }}
               />
@@ -259,7 +257,7 @@ const AboutPage = () => {
         </div>
       </motion.section>
 
-      {/* Testimonials */}
+      {/* Testimonials Section */}
       <motion.section 
         ref={testimonialsRef}
         initial={{ opacity: 0 }}
@@ -276,10 +274,10 @@ const AboutPage = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 md:mb-4">
-              Was Familien sagen
+              Kundenstimmen zum Pflegedienst Dreieich
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-              Das Vertrauen und die Zufriedenheit unserer Familien ist unser größter Erfolg
+              Das Vertrauen und die Zufriedenheit unserer Pflegekunden ist unser größter Erfolg
             </p>
           </motion.div>
           
@@ -345,7 +343,7 @@ const AboutPage = () => {
         </div>
       </motion.section>
 
-      {/* Team Photo */}
+      {/* Team Section with detailed content */}
       <motion.section 
         ref={teamRef}
         initial={{ opacity: 0 }}
@@ -379,7 +377,7 @@ const AboutPage = () => {
               ></motion.div>
               <img 
                 src={commonAreaImage} 
-                alt="Team und Bewohner"
+                alt="Pflegeteam und Bewohner des Pflegedienst Dreieich"
                 className="relative rounded-xl sm:rounded-2xl shadow-card w-full h-64 sm:h-80 md:h-96 object-cover"
                 style={{ filter: 'brightness(1.1)' }}
               />
@@ -397,7 +395,7 @@ const AboutPage = () => {
                 animate={isTeamInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8 }}
               >
-                Unser Team
+                Unser erfahrenes Pflegeteam
               </motion.h2>
               <motion.p 
                 className="text-base sm:text-lg text-muted-foreground leading-relaxed"
@@ -405,7 +403,7 @@ const AboutPage = () => {
                 animate={isTeamInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Unser Team besteht aus Mitarbeiterinnen die langjährig in der Pflege tätig gewesen sind und sich nun selbstständig gemacht haben. Ihre Erfahrung möchten Sie einsetzen, um den Menschen zu helfen. Der Mensch steht dabei im Mittelpunkt.
+                Unser Team besteht aus Pflegefachkräften, die langjährig in der Pflege tätig gewesen sind und sich nun mit Pflegedienst Dreieich selbstständig gemacht haben. Ihre umfangreiche Erfahrung setzen sie ein, um Menschen in Dreieich und Umgebung zu helfen.
               </motion.p>
               <motion.p 
                 className="text-base sm:text-lg text-muted-foreground leading-relaxed"
@@ -413,7 +411,7 @@ const AboutPage = () => {
                 animate={isTeamInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                Wir betrachten die Pflege ganzheitlich und nehmen uns Zeit.
+                Wir betrachten die Pflege ganzheitlich und nehmen uns Zeit für jeden Pflegebedürftigen. Der Mensch steht dabei im Mittelpunkt unserer ambulanten Pflegedienstleistungen.
               </motion.p>
               <motion.p 
                 className="text-base sm:text-lg text-muted-foreground leading-relaxed"
@@ -421,7 +419,7 @@ const AboutPage = () => {
                 animate={isTeamInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Als Pflegedienst legen wir großen Wert auf Kommunikationskultur, basierend auf gegenseitiger Wertschätzung, Empathie, Respekt und Feedback-Kultur.
+                Als Pflegedienst in Dreieich legen wir großen Wert auf eine wertschätzende Kommunikationskultur, basierend auf gegenseitigem Respekt, Empathie und kontinuierlichem Feedback.
               </motion.p>
               <motion.p 
                 className="text-base sm:text-lg text-muted-foreground leading-relaxed"
@@ -429,7 +427,7 @@ const AboutPage = () => {
                 animate={isTeamInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                Wir legen großen Wert auf Qualität und arbeiten nach den Expertenstandards in der Pflege.
+                Wir legen größten Wert auf Qualität in der Pflege und arbeiten nach den aktuellen Expertenstandards in der Pflege.
               </motion.p>
               <motion.p 
                 className="text-base sm:text-lg text-muted-foreground leading-relaxed"
@@ -437,7 +435,7 @@ const AboutPage = () => {
                 animate={isTeamInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                Regelmäßige Fortbildungen unserer Personals zählen auch dazu.
+                Regelmäßige Fortbildungen unseres Pflegepersonals gehören zu unserem Qualitätsversprechen im Pflegedienst Dreieich.
               </motion.p>
               <motion.p 
                 className="text-base sm:text-lg text-muted-foreground leading-relaxed font-semibold"
@@ -445,7 +443,7 @@ const AboutPage = () => {
                 animate={isTeamInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
-                Gerne können Sie uns kennenlernen und sich hiervon ein eigenes Bild machen.
+                Gerne können Sie uns und unser Pflegeteam kennenlernen und sich hiervon ein eigenes Bild machen.
               </motion.p>
               <motion.div 
                 className="grid grid-cols-2 gap-4 sm:gap-6"
@@ -501,19 +499,6 @@ const AboutPage = () => {
                   </motion.div>
                 ))}
               </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isTeamInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 1.0 }}
-              >
-                {/* <Button 
-                  className="bg-gradient-to-r from-[#00b140] to-[#00b140]/80 hover:from-[#00b140] hover:to-[#00b140] text-white transition-all duration-300 w-full sm:w-auto" 
-                  size="lg"
-                  onClick={handleContactClick}
-                >
-                  Kontaktieren Sie uns
-                </Button> */}
-              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -548,7 +533,7 @@ const AboutPage = () => {
               animate={isCtaInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.4 }}
             >
-              Erleben Sie den Pflegedienst Dreieich Unterschied
+              Erfahren Sie mehr über Pflegedienst Dreieich
             </motion.h2>
             <motion.p 
               className="text-lg sm:text-xl text-white/95 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md px-4"
@@ -556,8 +541,7 @@ const AboutPage = () => {
               animate={isCtaInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.6 }}
             >
-              Besuchen Sie uns, um aus erster Hand zu sehen, wie wir eine fürsorgliche 
-              Gemeinschaft schaffen, in der Ihr Angehöriger wirklich gedeihen kann.
+              Lernen Sie unser Team und unsere Werte persönlich kennen. Vereinbaren Sie noch heute ein unverbindliches Beratungsgespräch für ambulante Pflege in Dreieich und Umgebung.
             </motion.p>
             <motion.div 
               className="flex justify-center"
@@ -577,7 +561,7 @@ const AboutPage = () => {
                   className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-white text-[#00b140] hover:bg-gray-100 font-semibold border-2 border-white transition-all duration-300 shadow-lg w-full sm:w-auto"
                   onClick={handleContactClick}
                 >
-                  Kontaktieren Sie uns
+                  Unverbindlich beraten lassen
                 </Button>
               </motion.div>
             </motion.div>
@@ -588,6 +572,6 @@ const AboutPage = () => {
       <Footer />
     </div>
   );
-};
+}
 
-export default AboutPage;
+export default Page;

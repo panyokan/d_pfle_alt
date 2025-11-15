@@ -9,7 +9,45 @@ import couplehug from "@/assets/vlad-sargu-ItphH2lGzuI-unsplash.jpg";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const ContactPage = () => {
+// SEO Metadata - This is crucial for vite-plugin-ssr
+export { Page };
+export const documentProps = {
+  title: "Kontakt | Pflegedienst Dreieich - Ambulante Pflege in Dreieich & Umgebung",
+  description: "Kontaktieren Sie Pflegedienst Dreieich für professionelle ambulante Pflege. Standort: Freiherr-vom-Stein-Straße 42, 63303 Dreieich. Telefon: +491606397787",
+  keywords: "Pflegedienst Dreieich Kontakt, Ambulante Pflege Dreieich, Pflegedienst Telefon, Pflegeberatung Dreieich, Notfall Pflege, Seniorenbetreuung Kontakt",
+  canonical: "/contact",
+  ogImage: "/og-contact.jpg"
+};
+
+// Structured data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Kontakt - Pflegedienst Dreieich",
+  "description": "Kontaktinformationen für ambulante Pflegedienstleistungen in Dreieich",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Pflegedienst Dreieich",
+    "telephone": "+491606397787",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Freiherr-vom-Stein-Straße 42",
+      "addressLocality": "Dreieich",
+      "postalCode": "63303",
+      "addressCountry": "DE"
+    },
+    "openingHours": "Mo-Fr 09:00-15:00",
+    "areaServed": ["Dreieich", "Neu-Isenburg", "Dietzenbach", "Langen", "Egelsbach"]
+  }
+};
+
+const openingHours = [
+  { day: "Mo-Fr", hours: "9:00 - 15:00" },
+  { day: "Sa-So", hours: "Geschlossen" },
+];
+
+// Define the Page component
+function ContactPage() {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -34,13 +72,14 @@ const ContactPage = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-  const openingHours = [
-    { day: "Mo-Fr", hours: "9:00 - 15:00" },
-    { day: "Sa-So", hours: "Geschlossen" },
-  ];
-
   return (
     <div className="min-h-screen font-montserrat" ref={containerRef}>
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
       <Header />
       
       {/* Hero Section - Increased height */}
@@ -383,6 +422,11 @@ const ContactPage = () => {
       <Footer />
     </div>
   );
+}
+
+// Export as an object (this is what vite-plugin-ssr expects)
+const Page = {
+  component: ContactPage
 };
 
-export default ContactPage;
+export default Page;
