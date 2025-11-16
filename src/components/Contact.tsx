@@ -110,7 +110,7 @@ const Contact = () => {
       if (response.ok) {
         setSubmitStatus({
           type: "success",
-          message: "Erfolgreich gesendet! Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
+          message: "Erfolgreich gesendet! Wir melden uns schnellstmöglich bei Ihnen",
         });
         
         // Reset form
@@ -239,7 +239,7 @@ const Contact = () => {
                 </CardTitle>
               </div>
               <p className="text-muted-foreground text-base leading-relaxed">
-                Füllen Sie das Formular aus und wir melden uns innerhalb von <span className="font-semibold text-[#00b140]">24 Stunden</span> bei Ihnen.
+                Füllen Sie das Formular aus und wir melden uns innerhalb von <span className="font-semibold text-[#00b140]">schnellstmöglich</span> bei Ihnen.
               </p>
             </CardHeader>
             <CardContent className="px-6 pb-8">
