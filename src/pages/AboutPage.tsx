@@ -14,7 +14,7 @@ import {
   Star,
 } from "lucide-react";
 import staffImage from "@/assets/healthcare-staff.jpg";
-import commonAreaImage from "@/assets/doctor-talking-with-her-elder-patient (1) (3).jpg";
+import commonAreaImage from "@/assets/doctor-talking-with-her-elder-patient.jpg";
 
 import hug from "@/assets/old-man-nursing-home-helped-by-female-doctor-take-his-medicine.jpg";
 import hug2 from "@/assets/hug2.jpeg";
