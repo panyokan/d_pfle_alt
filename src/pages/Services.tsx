@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -16,20 +15,17 @@ import {
   Utensils,
   Activity,
   Shield,
-  Home,
-  Brain,
+ 
   Dumbbell,
-  Music,
-  Palette,
+  
 } from "lucide-react";
 import diningImage from "@/assets/portrait-retired-couple-with-disability-sitting-couch-looking-camera-elder-man-woman-crutches-wheelchair-accessibility-mobility-enjoying-free-time.jpg";
 import rehabImage from "@/assets/therapy.jpeg";
 import activitiesImage from "@/assets/male-nurse-helping-senior-retired-disabled-woman-wheelchair-rehabilitate-using-dumbbels.jpg";
 import outdoor from "@/assets/care-for-the-elderly-6960542_1920.jpg";
 import holdingHand from "@/assets/holdHand.jpg";
-// import newhero from "@/assets/newhero4.jpeg";
-// import newhero from "@/assets/service3.jpeg";
-import newhero from "@/assets/indiviual_care (2).jpg";
+
+import newhero from "@/assets/indiviual_care.jpg";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
@@ -214,7 +210,7 @@ const Services = () => {
     <div className="min-h-screen font-montserrat" ref={containerRef}>
       <Header />
 
-      {/* Hero Section */}
+      
       <section
         className="py-16 md:py-20 bg-gradient-to-br from-[#00b140] to-[#00b140]/90 text-white relative overflow-hidden"
         style={{
@@ -364,7 +360,7 @@ const Services = () => {
               Unsere pflegeleistunge
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-0">
-              {/* Unsere grundlegenden Dienstleistungen bilden die Grundlage für emphatische Seniorenpflege */}
+
               Nach SGB V, XI und XII
             </p>
           </motion.div>
