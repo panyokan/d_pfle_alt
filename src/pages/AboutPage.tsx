@@ -16,7 +16,7 @@ import {
 import staffImage from "@/assets/healthcare-staff.jpg";
 import commonAreaImage from "@/assets/doctor-talking-with-her-elder-patient.jpg";
 
-import hug from "@/assets/old-man-nursing-home-helped-by-female-doctor-take-his-medicine.jpg";
+import hug from "@/assets/portrait-old-disabled-woman-man-nurse-looking-camera-nursing-home-retired-patient-with-chronic-issues-sitting-wheelchair-while-medical-assistant-preparing-examination.jpg";
 import hug2 from "@/assets/hug2.jpeg";
 import room from "@/assets/timothy-buck-psrloDbaZc8-unsplash.jpg 13-21-58-518.jpg";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
@@ -138,7 +138,7 @@ const AboutPage = () => {
         <Header />
 
         {/* Hero Section */}
-        <section
+      <section
           className="py-16 md:py-20 bg-gradient-to-br from-[#00b140] to-[#00b140]/90 text-white relative overflow-hidden"
           style={{
             backgroundImage: `url(${hug})`,
