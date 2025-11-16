@@ -51,7 +51,7 @@ const ContactPage = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center left',
           backgroundRepeat: 'no-repeat',
-          minHeight: '62vh',
+          minHeight: '58vh',
           filter: 'brightness(1.1)',
         }}
       >
@@ -62,7 +62,7 @@ const ContactPage = () => {
           className="absolute inset-0 bg-[#00b140]/5"
           style={{ y }}
         ></motion.div>
-        <div className="container mx-auto px-6 text-center relative z-10 flex items-center justify-center py-36">
+        <div className="container mx-auto px-6 text-center relative z-10 flex items-center justify-center py-12 md:py-28">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">
               Kontakt aufnehmen

@@ -24,7 +24,7 @@ import hero1 from "@/assets/hero.jpg";
 import hero2 from "@/assets/herohero.jpeg";
 import hero3 from "@/assets/hug.jpeg";
 import hero4 from "@/assets/hero4.jpg";
-import hero5 from "@/assets/hero5.jpg";
+import hero5 from "@/assets/doctor-helping-senior-patient.jpg";
 
 // Mobile images
 // import heroMobile1 from "@/assets/newhero.jpeg";

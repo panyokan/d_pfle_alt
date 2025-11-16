@@ -14,11 +14,11 @@ import {
   Star,
 } from "lucide-react";
 import staffImage from "@/assets/healthcare-staff.jpg";
-import commonAreaImage from "@/assets/doctor-talking-with-her-elder-patient (1).jpg";
+import commonAreaImage from "@/assets/doctor-talking-with-her-elder-patient (1) (3).jpg";
 
 import hug from "@/assets/old-man-nursing-home-helped-by-female-doctor-take-his-medicine.jpg";
 import hug2 from "@/assets/hug2.jpeg";
-import room from "@/assets/timothy-buck-psrloDbaZc8-unsplash.jpg";
+import room from "@/assets/timothy-buck-psrloDbaZc8-unsplash.jpg 13-21-58-518.jpg";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
@@ -157,19 +157,18 @@ const AboutPage = () => {
           ></motion.div>
           <div className="container mx-auto px-4 sm:px-6 text-center relative z-10 flex items-center justify-center py-12 md:py-20">
             <div className="max-w-4xl">
-              <motion.h1
-                className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 text-white drop-shadow-lg"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+              <h1
+                className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg"
+                
+               
               >
                 Über uns
-              </motion.h1>
+              </h1>
               <motion.p
-                className="text-lg sm:text-xl md:text-2xl text-white/95 max-w-3xl mx-auto leading-relaxed drop-shadow-md font-medium px-4"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                 className="text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed drop-shadow-md font-medium"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               >
                 Unser ambulanter Pflegedienst mit Sitz in Dreieich, bietet seine
                 Dienstleitungen auch in den umliegenden Kommunen an. Hierzu
@@ -201,7 +200,9 @@ const AboutPage = () => {
                   animate={isMissionInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 md:mb-6">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 md:mb-6
+                  
+                  ">
                     Unsere Mission & Werte
                   </h2>
                   <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 md:mb-6">

@@ -29,7 +29,7 @@ import outdoor from "@/assets/care-for-the-elderly-6960542_1920.jpg";
 import holdingHand from "@/assets/holdHand.jpg";
 // import newhero from "@/assets/newhero4.jpeg";
 // import newhero from "@/assets/service3.jpeg";
-import newhero from "@/assets/indiviual_care.jpg";
+import newhero from "@/assets/indiviual_care (2).jpg";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
@@ -235,19 +235,16 @@ const Services = () => {
         ></motion.div>
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10 flex items-center justify-center py-12 md:py-20">
           <div className="max-w-4xl">
-            <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-white drop-shadow-lg leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg"
+             
             >
-              Umfassende Pflegedienste
-            </motion.h1>
+               Umfassende Pflegedienste
+            </h1>
             <motion.p
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mx-auto leading-relaxed drop-shadow-md font-medium px-4 sm:px-0"
+              className="text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed drop-shadow-md font-medium"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
             >
               Wir bieten ein vollständiges Spektrum an Dienstleistungen, die
               darauf ausgerichtet sind, das körperliche, emotionale und soziale

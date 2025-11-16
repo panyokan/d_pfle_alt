@@ -460,8 +460,8 @@ const Contact = () => {
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover/btn:translate-x-[200%] transition-transform duration-1000"></span>
                 
                 {/* Sparkle effect */}
-                <Sparkles className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />
-                <Sparkles className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300 delay-150" />
+                {/* <Sparkles className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />
+                <Sparkles className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300 delay-150" /> */}
                 
                 {/* Button content */}
                 <span className="relative z-10 flex items-center justify-center gap-3">
