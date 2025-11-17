@@ -63,24 +63,24 @@ const TeamSection = () => {
       icon: Award,
       target: 25,
       suffix: "+",
-      label: "Years of experience",
-      description: "In outpatient care",
+      label: "Langjährige Erfahrung",
+      description: "In der ambulanten Versorgung",
       duration: 2000,
     },
     {
       icon: Star,
       target: 100,
       suffix: "%",
-      label: "Satisfaction",
-      description: "Our customers rate us",
+      label: "Zufriedenheit",
+      description: "Unsere Kunden bewerten uns",
       duration: 2000,
     },
     {
       icon: Clock,
       target: 24,
       suffix: "/7",
-      label: "Availability",
-      description: "Available for you around the clock",
+      label: "Verfügbarkeit",
+      description: "Rund um die Uhr für Sie da",
       duration: 2000,
     },
   ];
@@ -435,8 +435,8 @@ const TeamSection = () => {
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#00b140] via-[#00a138] to-[#00b140] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></span>
                 
                 {/* Sparkle effect */}
-                {/* <Sparkles className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />
-                <Sparkles className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300 delay-150" /> */}
+                <Sparkles className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />
+                <Sparkles className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300 delay-150" />
                 
                 {/* Button content */}
                 <span className="relative z-10 flex items-center justify-center gap-2">
@@ -461,8 +461,8 @@ const TeamSection = () => {
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#00b140] via-[#00a138] to-[#00b140] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></span>
                 
                 {/* Sparkle effect */}
-                {/* <Sparkles className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />
-                <Sparkles className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300 delay-150" /> */}
+                <Sparkles className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300" />
+                <Sparkles className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white opacity-0 group-hover/btn:opacity-100 group-hover/btn:animate-pulse transition-opacity duration-300 delay-150" />
                 
                 {/* Button content */}
                 <span className="relative z-10 flex items-center justify-center gap-2">
