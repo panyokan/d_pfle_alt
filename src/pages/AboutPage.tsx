@@ -16,7 +16,7 @@ import {
 import staffImage from "@/assets/healthcare-staff.jpg";
 import commonAreaImage from "@/assets/doctor-talking-with-her-elder-patient.jpg";
 
-import hug from "@/assets/portrait-old-disabled-woman-man-nurse-looking-camera-nursing-home-retired-patient-with-chronic-issues-sitting-wheelchair-while-medical-assistant-preparing-examination.jpg";
+import hug from "@/assets/bright-room-with-big-windows.jpg";
 import hug2 from "@/assets/hug2.jpeg";
 import room from "@/assets/timothy-buck-psrloDbaZc8-unsplash.jpg 13-21-58-518.jpg";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
