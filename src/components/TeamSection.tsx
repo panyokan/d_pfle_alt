@@ -5,7 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import magdalenaImage from "@/assets/magdalenal.jpeg";
-import puneetImage from "@/assets/puneet.jpeg"; 
+import puneetImage from "@/assets/pune.jpeg"; 
 import { useNavigate } from "react-router-dom";
 
 const AnimatedCounter = ({ target, duration = 2000 }) => {
@@ -240,7 +240,7 @@ const TeamSection = () => {
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover"
-                  style={{ objectPosition: '90% 30%' }}
+                  style={{ objectPosition: '90% 27%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 <motion.div 
