@@ -17,7 +17,7 @@ const Imprint = () => {
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Wichtige rechtliche Informationen, Lizenzdetails und Compliance-Informationen 
-              für die Pflegedienst Dreieich Seniorenwohnanlage.
+              für die Pflegedienst 3eich Seniorenwohnanlage.
             </p>
           </div>
         </div>
@@ -44,7 +44,7 @@ const Imprint = () => {
                 <CardContent className="space-y-4">
                   <div>
                     <div className="font-semibold text-foreground">Rechtlicher Name:</div>
-                    <div className="text-muted-foreground">Pflegedienst Dreieich Seniorenwohnanlage GmbH</div>
+                    <div className="text-muted-foreground">Pflegedienst 3eich Seniorenwohnanlage GmbH</div>
                   </div>
                   <div>
                     <div className="font-semibold text-foreground">Adresse:</div>
@@ -181,7 +181,7 @@ const Imprint = () => {
               </CardHeader>
               <CardContent className="prose prose-gray max-w-none">
                 <p className="text-muted-foreground leading-relaxed">
-                  Pflegedienst Dreieich Seniorenwohnanlage ist verpflichtet, die Privatsphäre und Vertraulichkeit 
+                  Pflegedienst 3eich Seniorenwohnanlage ist verpflichtet, die Privatsphäre und Vertraulichkeit 
                   der persönlichen und gesundheitsbezogenen Daten unserer Bewohner zu schützen. Wir halten uns 
                   an alle geltenden Datenschutzgesetze einschließlich der DSGVO (Datenschutz-Grundverordnung) 
                   und unterhalten strenge Protokolle für den Umgang mit sensiblen Informationen.
@@ -246,7 +246,7 @@ const Imprint = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  Pflegedienst Dreieich unterhält umfassende Notfallvorsorgepläne, die von lokalen und 
+                  Pflegedienst 3eich unterhält umfassende Notfallvorsorgepläne, die von lokalen und 
                   staatlichen Behörden genehmigt wurden. Unsere Einrichtung ist mit Notstrom, 
                   Kommunikationssystemen und Evakuierungsverfahren ausgestattet. Alle Mitarbeiter 
                   erhalten regelmäßige Notfallreaktionstrainings, und wir führen das ganze Jahr über 
@@ -267,7 +267,7 @@ const Imprint = () => {
               Für spezifische medizinische Beratung oder Pflegeentscheidungen konsultieren Sie bitte unsere Gesundheitsfachkräfte.
             </p>
             <p className="mt-2">
-              Zuletzt aktualisiert: Januar 2024 | © 2024 Pflegedienst Dreieich Seniorenwohnanlage GmbH. Alle Rechte vorbehalten.
+              Zuletzt aktualisiert: Januar 2024 | © 2024 Pflegedienst 3eich Seniorenwohnanlage GmbH. Alle Rechte vorbehalten.
             </p>
           </div>
         </div>
