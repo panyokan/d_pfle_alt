@@ -107,13 +107,14 @@ const specialtyServices = [
     title: "Häusliche Krankenpflege / med. Versorgung (SGB V Bereich)",
     description: "Medizinische Versorgungsleistungen z.B.:",
     features: [
-      "Verbandswechsel",
       "Medikamentengabe",
+       "An- Ausziehen von Kompressionsstrümpfen",
+       "Insulin Injektion",
+        "Blutzucker-, Blutdruck-, Pulsmessung",
+           "Vitalzeichen Kontrolle und Überwachung",
+      "Verbandswechsel",
       "Medikamente richten",
-      "Insulin Injektion",
-      "Vitalzeichen Kontrolle und Überwachung",
-      "Blutzucker-, Blutdruck-, Pulsmessung",
-      "An- Ausziehen von Kompressionsstrümpfen",
+      
     ],
   },
   {
@@ -129,6 +130,10 @@ const specialtyServices = [
       "Hilfestellung bei Ausscheidung",
       "Hilfe bei der Ernährung",
       "Einkaufen, Hilfe im Haushalt",
+      "Individuelle Pflegeberatung",
+      "Unterstützung bei Anträgen",
+       "Dokumentation und Nachweisführung",
+    
     ],
   },
   {
@@ -153,11 +158,8 @@ const specialtyServices = [
     features: [
       "Vierteljährliche Beratungsbesuche",
       "Halbjährliche Beratungsbesuche",
-      "Individuelle Pflegeberatung",
-      "Unterstützung bei Anträgen",
-      "Dokumentation und Nachweisführung",
-      "Qualitätssicherung",
       "Beratung zu Pflegehilfsmitteln",
+        "Qualitätssicherung",
     ],
   },
 ];
@@ -323,7 +325,7 @@ const Services = () => {
             </div>
 
             {/* Activities */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="relative order-1 lg:order-2">
                 <img
                   src={activitiesImage}
@@ -351,7 +353,7 @@ const Services = () => {
                   durch eine Vielzahl von Freizeit- und Bildungsmöglichkeiten.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

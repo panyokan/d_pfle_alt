@@ -65,7 +65,7 @@ const AboutPage = () => {
       year: "1999",
       title: "Gegründet",
       description:
-        "Pflegedienst Dreieich öffnete seine Türen mit der Vision, außergewöhnliche Seniorenpflege zu bieten",
+        "Pflegedienst 3eich öffnete seine Türen mit der Vision, außergewöhnliche Seniorenpflege zu bieten",
     },
     {
       year: "2005",
@@ -93,38 +93,39 @@ const AboutPage = () => {
   ];
 
   const testimonials = [
-    {
-      quote:
-        "Das Personal bei Pflegedienst Dreieich behandelte meinen Vater wie Familie. Ihr Mitgefühl und ihre Professionalität gaben uns in einer schwierigen Zeit inneren Frieden.",
-      author: "Jennifer Thompson",
-      role: "Tochter einer Bewohnerin",
-      rating: 5,
-    },
-    {
-      quote:
-        "Ich arbeite seit 30 Jahren im Gesundheitswesen und kann ehrlich sagen, dass dies die beste Einrichtung ist, die ich je gesehen habe. Die Aufmerksamkeit für Details ist bemerkenswert.",
-      author: "Dr. Michael Chen",
-      role: "Familienarzt",
-      rating: 5,
-    },
-    {
-      quote:
-        "Hierher zu ziehen war die beste Entscheidung, die wir getroffen haben. Die Aktivitäten, das Essen, die Pflege - alles übertrifft die Erwartungen.",
-      author: "Robert & Mary Wilson",
-      role: "Bewohner",
-      rating: 5,
-    },
-  ];
+  {
+    quote:
+      "Der Pflegedienst 3eich hat sich mit so viel Geduld und Herzlichkeit um meine Mutter gekümmert. Man merkt sofort, dass hier Menschen arbeiten, die ihren Beruf lieben. Wir sind unendlich dankbar.",
+    author: "Sabine Müller",
+    role: "Tochter einer Patientin",
+    rating: 5,
+  },
+  {
+    quote:
+      "Als Hausarzt habe ich mit vielen Pflegediensten zusammengearbeitet. Dieser hier gehört ohne Zweifel zu den zuverlässigsten und professionellsten. Die Kommunikation ist vorbildlich.",
+    author: "Dr. Andreas Schneider",
+    role: "Hausarzt",
+    rating: 5,
+  },
+  {
+    quote:
+      "Seit ich hier betreut werde, fühle ich mich gut aufgehoben. Die Mitarbeitenden nehmen sich Zeit, hören zu und helfen, wo sie können. Ich fühle mich hier wirklich zuhause.",
+    author: "Hannelore Becker",
+    role: "Patientin",
+    rating: 5,
+  },
+];
+
 
   return (
     <>
       <Helmet>
-        <title>Über uns – Pflegedienst Dreieich</title>
+        <title>Über uns – Pflegedienst 3eich</title>
         <meta
           name="description"
           content="Erfahren Sie mehr über unseren Pflegedienst in Dreieich."
         />
-        <meta property="og:title" content="Über uns – Pflegedienst Dreieich" />
+        <meta property="og:title" content="Über uns – Pflegedienst 3eich" />
         <meta
           property="og:description"
           content="Erfahren Sie mehr über unseren Pflegedienst in Dreieich."
@@ -511,7 +512,7 @@ const AboutPage = () => {
                 >
                   Als Pflegedienst legen wir großen Wert auf
                   Kommunikationskultur, basierend auf gegenseitiger
-                  Wertschätzung, Empathie, Respekt und Feedback-Kultur.
+                  Wertschätzung, Biografie , Empathie, Respekt und Feedback-Kultur.
                 </motion.p>
                 <motion.p
                   className="text-base sm:text-lg text-muted-foreground leading-relaxed"
@@ -650,7 +651,7 @@ const AboutPage = () => {
                 animate={isCtaInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.4 }}
               >
-                Erleben Sie den Pflegedienst Dreieich Unterschied
+                Erleben Sie den Pflegedienst 3eich Unterschied
               </motion.h2>
               <motion.p
                 className="text-lg sm:text-xl text-white/95 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md px-4"

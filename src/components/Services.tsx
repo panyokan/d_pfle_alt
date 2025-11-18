@@ -112,7 +112,7 @@ const Services = () => {
                 <CardDescription className="text-center text-gray-600 leading-relaxed mb-4 group-hover:text-gray-700 transition-colors duration-300">
                   {service.description}
                 </CardDescription>
-                {/* <div className="text-center">
+                <div className="text-center">
                   <Button 
                     size="lg"
                     className="text-lg px-8 py-6 bg-white text-[#00b140] hover:bg-[#00b140] hover:text-white font-semibold border-2 border-[#00b140] transition-all duration-300 shadow-lg w-full group/btn relative overflow-hidden hover:shadow-xl hover:border-[#00b140]"
@@ -131,7 +131,7 @@ const Services = () => {
                       <ArrowRight className="w-5 h-5 transform group-hover/btn:translate-x-2 transition-transform duration-300 group-hover/btn:scale-110" />
                     </span>
                   </Button>
-                </div> */}
+                </div>
               </CardContent>
             </Card>
           ))}

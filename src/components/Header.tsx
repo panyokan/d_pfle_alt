@@ -96,13 +96,13 @@ const Header = () => {
               >
                 <img
                   src={logoImage}
-                  alt="Pflegedienst Dreieich Logo"
+                  alt="Pflegedienst 3eich Logo"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
               <div className="hidden sm:block">
                 <span className={`text-xl sm:text-2xl font-bold ${logoTextGradient}`}>
-               Pflegedienst Dreieich
+               Pflegedienst 3eich
                 </span>
                 <div
                   className={`text-xs sm:text-sm font-medium transition-colors duration-300 ${logoSubtextColor}`}

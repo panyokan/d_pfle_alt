@@ -4,6 +4,22 @@ import logoImage from "@/assets/logo.jpeg";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const services = [
+    { name: "Häusliche Krankenpflege / med. Versorgung (SGB V Bereich)", path: "/services#krankenpflege" },
+    { name: "Entlastungsleistungen (§45b SGB XI)", path: "/services#entlastungsleistungen" },
+    { name: "Pflegeriche Versorgung (SGB XI und XII Bereich)", path: "/services#pflegeversorgung" },
+    { name: "Beratungseinsätze (§37 Abs. 3 SGB XI)", path: "/services#beratung" },
+  ];
+
+  const quickLinks = [
+    { name: "Über uns", path: "/about" },
+    { name: "Unser Team", path: "/team" },
+    { name: "Kontakt", path: "/contact" },
+    { name: "Häufige Fragen", path: "/faq" },
+    { name: "Blog & News", path: "/blog" },
+    { name: "Downloads", path: "/downloads" },
+  ];
+
   return (
     <footer className="bg-gradient-to-br from-gray-800 to-emerald-800 text-white font-montserrat" style={{ filter: 'brightness(1.1)' }}>
       <div className="container mx-auto px-6 py-16">
@@ -31,24 +47,16 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-white">Unsere Dienstleistungen</h3>
             <ul className="space-y-3 text-emerald-50">
-              <li>
-                <span className="block">Hauswirtschaftliche Hilfe</span>
-              </li>
-              <li>
-                <span className="block">Entlastungsleistungen</span>
-              </li>
-              <li>
-                <span className="block">Beratung & Planung</span>
-              </li>
-              <li>
-                <span className="block">Gesellschaft & Begleitung</span>
-              </li>
-              <li>
-                <span className="block">Pflegehilfsmittel</span>
-              </li>
-              <li>
-                <span className="block">24/7 Für Sie erreichbar</span>
-              </li>
+              {services.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path}
+                    className="block hover:text-white transition-colors duration-300 hover:translate-x-1 transform transition-transform"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -56,24 +64,16 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-white">Schnellzugriff</h3>
             <ul className="space-y-3 text-emerald-50">
-              <li>
-                <span className="block">Über uns</span>
-              </li>
-              <li>
-                <span className="block">Unser Team</span>
-              </li>
-              <li>
-                <span className="block">Kontakt</span>
-              </li>
-              <li>
-                <span className="block">Häufige Fragen</span>
-              </li>
-              <li>
-                <span className="block">Blog & News</span>
-              </li>
-              <li>
-                <span className="block">Downloads</span>
-              </li>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.path}
+                    className="block hover:text-white transition-colors duration-300 hover:translate-x-1 transform transition-transform"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -129,7 +129,8 @@ const Footer = () => {
         <div className="border-t border-emerald-600/50 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-emerald-100 text-sm">
-© Copyright by Ambulanter Pflegedienst 3eich. Alle Rechte vorbehalten.            </div>
+              © Copyright by Ambulanter Pflegedienst 3eich. Alle Rechte vorbehalten.
+            </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-emerald-100 hover:text-white text-base transition-colors duration-300 font-medium">
                 Datenschutz

@@ -74,7 +74,7 @@ const ContactPage = () => {
               transition={{ duration: 0.4, delay: 0.1 }}
             >
               Wir sind hier, um Ihre Fragen zu beantworten, Informationen bereitzustellen und Ihnen zu helfen, 
-              zu entdecken, wie Pflegedienst Dreieich das perfekte Zuhause für Ihren Angehörigen sein kann.
+              zu entdecken, wie Pflegedienst 3eich das perfekte Zuhause für Ihren Angehörigen sein kann.
             </motion.p>
           </div>
         </div>
@@ -105,7 +105,7 @@ const ContactPage = () => {
               transition={{ duration: 0.2, delay: 0.1 }}
             >
               Wir sind hier, um Ihre Fragen zu beantworten, Informationen bereitzustellen und Ihnen zu helfen, 
-              zu entdecken, wie Pflegedienst Dreieich das perfekte Zuhause für Ihren Angehörigen sein kann.
+              zu entdecken, wie Pflegedienst 3eich das perfekte Zuhause für Ihren Angehörigen sein kann.
             </motion.p>
           </div>
         </div>
@@ -128,7 +128,7 @@ const ContactPage = () => {
               animate={isLocationInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.2, delay: 0.05 }}
             >
-              Besuchen Sie unsere Einrichtung
+              Besuchen Sie unsere Pflegedienst
             </motion.h2>
             <motion.p 
               className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed"
@@ -155,7 +155,7 @@ const ContactPage = () => {
                   content: (
                     <>
                       <div className="text-lg font-semibold text-foreground">
-                        Pflegedienst Dreieich Senior Living
+                        pflegedienst 3eich gmbh
                       </div>
                       <div className="text-muted-foreground">
                         Freiherr-vom-Stein-Straße 42, 63303 Dreieich, Germany
@@ -267,7 +267,7 @@ const ContactPage = () => {
                     </motion.div>
                     <div>
                       <h3 className="text-lg font-bold text-foreground">Standort</h3>
-                      <p className="text-sm text-muted-foreground">Freiherr-vom-Stein-Straße 42, 63303 Dreieich</p>
+                      <p className="text-sm text-muted-foreground">pflegedienst 3eich gmbh</p>
                     </div>
                   </div>
                   <motion.button
@@ -281,16 +281,18 @@ const ContactPage = () => {
 
                 {/* Map Container */}
                 <div className="relative rounded-2xl overflow-hidden shadow-lg border border-border/30">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2550.1234567890123!2d8.6969!3d50.0169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDAxJzA5LjQiTiA4wrA0MSc0OC44IkU!5e0!3m2!1sen!2sde!4v1234567890123"
-                    width="100%"
-                    height="300"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Pflegedienst Dreieich Senior Living Location"
-                  ></iframe>
+                <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.042306876503!2d8.68580337664387!3d50.02930307151485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0dd4b869a785%3A0x6bc0388bfa3497dc!2sPflegedienst%203eich%20GmbH%20(Dreieich)!5e0!3m2!1sen!2set!4v1763487902555!5m2!1sen!2set"
+  width="100%"
+  height="300"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+
+
+
                 </div>
               </div>
 
