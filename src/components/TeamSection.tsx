@@ -8,7 +8,9 @@ import magdalenaImage from "@/assets/mag_formal.png";
 // import puneetImage from "@/assets/pan_formal6.png"; 
 // import puneetImage from "@/assets/pan_formal3.png"; 
 // import puneetImage from "@/assets/pan_formal7.jpeg"; 
-import puneetImage from "@/assets/pan_formal8.png"; 
+import puneetImage from "@/assets/pan_formal5.jpeg"; 
+// import puneetImage from "@/assets/pan_formal.png"; 
+// import puneetImage from "@/assets/pan_formal9.jpg"; 
 import { useNavigate } from "react-router-dom";
 
 const AnimatedCounter = ({ target, duration = 2000 }) => {
