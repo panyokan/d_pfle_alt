@@ -32,7 +32,7 @@ const Footer = () => {
               </div>
               <div>
                 <span className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">
-                  Pflegedienst Dreieich
+                  Pflegedienst 3eich
                 </span>
                 <div className="text-sm text-emerald-100">Qualität ist kein zufall</div>
               </div>
