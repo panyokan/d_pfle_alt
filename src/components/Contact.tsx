@@ -187,7 +187,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">E-Mail</h4>
-                      <p className="text-[#00b140] font-medium">info@dreieich-pflege.de</p>
+                      <p className="text-[#00b140] font-medium">admin@dreieich-pflege.de</p>
                       <p className="text-sm text-muted-foreground">Antwort innerhalb 24h</p>
                     </div>
                   </div>

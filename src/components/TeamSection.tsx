@@ -4,8 +4,13 @@ import { Link } from "react-router-dom";
 import { useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import magdalenaImage from "@/assets/magdalenal.jpeg";
-import puneetImage from "@/assets/puneet.jpeg"; 
+import magdalenaImage from "@/assets/mag_formal.png";
+// import puneetImage from "@/assets/pan_formal6.png"; 
+// import puneetImage from "@/assets/pan_formal3.png"; 
+// import puneetImage from "@/assets/pan_formal7.jpeg"; 
+// import puneetImage from "@/assets/pan_formal5.jpeg"; 
+// import puneetImage from "@/assets/pan_formal.png"; 
+import puneetImage from "@/assets/pan_formal10.jpeg"; 
 import { useNavigate } from "react-router-dom";
 
 const AnimatedCounter = ({ target, duration = 2000 }) => {
@@ -232,7 +237,7 @@ const TeamSection = () => {
             >
               {/* Image Section */}
               <motion.div 
-                className="h-80 relative overflow-hidden bg-gray-100"
+                className="h-[550px] relative overflow-hidden bg-gray-100"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
@@ -240,7 +245,7 @@ const TeamSection = () => {
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover"
-                  style={{ objectPosition: '90% 30%' }}
+                  style={{ objectPosition: '60% 52%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 <motion.div 

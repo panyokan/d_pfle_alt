@@ -15,9 +15,9 @@ const Footer = () => {
     { name: "Über uns", path: "/about" },
     { name: "Unser Team", path: "/team" },
     { name: "Kontakt", path: "/contact" },
-    { name: "Häufige Fragen", path: "/faq" },
-    { name: "Blog & News", path: "/blog" },
-    { name: "Downloads", path: "/downloads" },
+    // { name: "Häufige Fragen", path: "/faq" },
+    // { name: "Blog & News", path: "/blog" },
+    // { name: "Downloads", path: "/downloads" },
   ];
 
   return (
@@ -32,7 +32,7 @@ const Footer = () => {
               </div>
               <div>
                 <span className="text-xl font-bold bg-gradient-to-r from-emerald-300 to-green-300 bg-clip-text text-transparent">
-                  Pflegedienst Dreieich
+                  Pflegedienst 3eich
                 </span>
                 <div className="text-sm text-emerald-100">Qualität ist kein zufall</div>
               </div>
@@ -106,7 +106,7 @@ const Footer = () => {
                   <Mail className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <div className="font-medium text-white">info@dreieich-pflege.de</div>
+                  <div className="font-medium text-white">admin@dreieich-pflege.de</div>
                   <div className="text-sm text-emerald-100">E-Mail</div>
                 </div>
               </div>
