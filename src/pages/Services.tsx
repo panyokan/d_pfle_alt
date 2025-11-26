@@ -133,7 +133,8 @@ const specialtyServices = [
       "Einkaufen, Hilfe im Haushalt",
       "Individuelle Pflegeberatung",
       "Unterstützung bei Anträgen",
-       "Dokumentation und Nachweisführung",
+      "Dokumentation und Nachweisführung",
+      "Qualitätssicherung",
     
     ],
   },
@@ -160,7 +161,6 @@ const specialtyServices = [
       "Vierteljährliche Beratungsbesuche",
       "Halbjährliche Beratungsbesuche",
       "Beratung zu Pflegehilfsmitteln",
-        "Qualitätssicherung",
     ],
   },
 ];
