@@ -97,7 +97,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="font-medium text-white">0160-6397787</div>
-                  <div className="text-sm text-emerald-100">Mobile</div>
+                  <div className="text-sm text-emerald-100">phylipos</div>
                 </div>
               </div>
               
