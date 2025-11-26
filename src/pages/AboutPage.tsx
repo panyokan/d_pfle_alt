@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import About from "@/components/About";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,19 +9,15 @@ import {
   Heart,
   Clock,
   Calendar,
-  MapPin,
   Star,
 } from "lucide-react";
-import staffImage from "@/assets/healthcare-staff.jpg";
-import commonAreaImage from "@/assets/doctor-talking-with-her-elder-patient.jpg";
-
 import hug from "@/assets/bright-room-with-big-windows.jpg";
 import hug2 from "@/assets/hug2.jpeg";
-import room from "@/assets/timothy-buck-psrloDbaZc8-unsplash.jpg 13-21-58-518.jpg";
+import room from "@/assets/doctor-talking-with-her-elder-patient.jpg";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import SEO from "@/components/SEO"; // 👈 CHANGED: Import SEO component instead of Helmet
 
 const AboutPage = () => {
   const navigate = useNavigate();
@@ -60,86 +55,46 @@ const AboutPage = () => {
     navigate("/contact");
   };
 
-  const timeline = [
+  const testimonials = [
     {
-      year: "1999",
-      title: "Gegründet",
-      description:
-        "Pflegedienst 3eich öffnete seine Türen mit der Vision, außergewöhnliche Seniorenpflege zu bieten",
+      quote:
+        "Der Pflegedienst 3eich hat sich mit so viel Geduld und Herzlichkeit um meine Mutter gekümmert. Man merkt sofort, dass hier Menschen arbeiten, die ihren Beruf lieben. Wir sind unendlich dankbar.",
+      author: "Sabine Müller",
+      role: "Tochter einer Patientin",
+      rating: 5,
     },
     {
-      year: "2005",
-      title: "Erweiterung",
-      description:
-        "Gedächtnispflege-Flügel hinzugefügt und Rehabilitationsdienste erweitert",
+      quote:
+        "Als Hausarzt habe ich mit vielen Pflegediensten zusammengearbeitet. Dieser hier gehört ohne Zweifel zu den zuverlässigsten und professionellsten. Die Kommunikation ist vorbildlich.",
+      author: "Dr. Andreas Schneider",
+      role: "Hausarzt",
+      rating: 5,
     },
     {
-      year: "2012",
-      title: "Anerkennung",
-      description:
-        "Staatliche Zertifizierung und 5-Sterne-Qualitätsbewertung erhalten",
-    },
-    {
-      year: "2018",
-      title: "Innovation",
-      description:
-        "Implementierung modernster Pflegetechnologien und Familienkommunikationssysteme",
-    },
-    {
-      year: "2024",
-      title: "Exzellenz",
-      description: "25 Jahre mitfühlende Pflege und Gemeinschaftsdienst feiern",
+      quote:
+        "Seit ich hier betreut werde, fühle ich mich gut aufgehoben. Die Mitarbeitenden nehmen sich Zeit, hören zu und helfen, wo sie können. Ich fühle mich hier wirklich zuhause.",
+      author: "Hannelore Becker",
+      role: "Patientin",
+      rating: 5,
     },
   ];
 
-  const testimonials = [
-  {
-    quote:
-      "Der Pflegedienst 3eich hat sich mit so viel Geduld und Herzlichkeit um meine Mutter gekümmert. Man merkt sofort, dass hier Menschen arbeiten, die ihren Beruf lieben. Wir sind unendlich dankbar.",
-    author: "Sabine Müller",
-    role: "Tochter einer Patientin",
-    rating: 5,
-  },
-  {
-    quote:
-      "Als Hausarzt habe ich mit vielen Pflegediensten zusammengearbeitet. Dieser hier gehört ohne Zweifel zu den zuverlässigsten und professionellsten. Die Kommunikation ist vorbildlich.",
-    author: "Dr. Andreas Schneider",
-    role: "Hausarzt",
-    rating: 5,
-  },
-  {
-    quote:
-      "Seit ich hier betreut werde, fühle ich mich gut aufgehoben. Die Mitarbeitenden nehmen sich Zeit, hören zu und helfen, wo sie können. Ich fühle mich hier wirklich zuhause.",
-    author: "Hannelore Becker",
-    role: "Patientin",
-    rating: 5,
-  },
-];
-
-
   return (
     <>
-      <Helmet>
-        <title>Über uns – Pflegedienst 3eich</title>
-        <meta
-          name="description"
-          content="Erfahren Sie mehr über unseren Pflegedienst in Dreieich."
-        />
-        <meta property="og:title" content="Über uns – Pflegedienst 3eich" />
-        <meta
-          property="og:description"
-          content="Erfahren Sie mehr über unseren Pflegedienst in Dreieich."
-        />
-        <meta
-          property="og:url"
-          content="https://raeygetahun.github.io/d_pfle_alt/about"
-        />
-      </Helmet>
+      {/* 👇 ADD SEO COMPONENT AT THE TOP */}
+      <SEO 
+        title="Über uns – Pflegedienst 3eich | Unser Team & Werte"
+        description="Erfahren Sie mehr über Pflegedienst 3eich in Dreieich. Unser erfahrenes Team bietet professionelle Pflege mit Empathie und Qualität. Jetzt kennenlernen!"
+        canonicalUrl="https://www.dreieich-pflege.de/about"
+        ogImage="/about-og.jpg"
+        keywords="Pflegedienst Dreieich, Über uns, Pflegeteam, Qualitätspflege, ambulante Pflege, Erfahrung, Werte"
+      />
+      
       <div className="min-h-screen font-montserrat" ref={containerRef}>
         <Header />
 
         {/* Hero Section */}
-      <section
+        <section
           className="py-16 md:py-20 bg-gradient-to-br from-[#00b140] to-[#00b140]/90 text-white relative overflow-hidden"
           style={{
             backgroundImage: `url(${hug})`,
@@ -160,16 +115,14 @@ const AboutPage = () => {
             <div className="max-w-4xl">
               <h1
                 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg"
-                
-               
               >
                 Über uns
               </h1>
               <motion.p
-                 className="text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed drop-shadow-md font-medium"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
+                className="text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed drop-shadow-md font-medium"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
               >
                 Unser ambulanter Pflegedienst mit Sitz in Dreieich, bietet seine
                 Dienstleitungen auch in den umliegenden Kommunen an. Hierzu
@@ -201,9 +154,7 @@ const AboutPage = () => {
                   animate={isMissionInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 md:mb-6
-                  
-                  ">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 md:mb-6">
                     Unsere Mission & Werte
                   </h2>
                   <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 md:mb-6">
@@ -310,7 +261,7 @@ const AboutPage = () => {
                 ></motion.div>
                 <img
                   src={hug2}
-                  alt="Gesundheitspersonal"
+                  alt="Gesundheitspersonal bei der Arbeit mit Patienten"
                   className="relative rounded-xl sm:rounded-2xl shadow-card w-full h-64 sm:h-80 md:h-96 object-cover"
                   style={{ filter: "brightness(1.1)" }}
                 />
@@ -424,7 +375,7 @@ const AboutPage = () => {
           </div>
         </motion.section>
 
-        {/* Team Photo */}
+        {/* Team Section */}
         <motion.section
           ref={teamRef}
           initial={{ opacity: 0 }}
@@ -464,8 +415,8 @@ const AboutPage = () => {
                   }}
                 ></motion.div>
                 <img
-                  src={commonAreaImage}
-                  alt="Team und Bewohner"
+                  src={room}
+                  alt="Unser Pflegeteam bei der Arbeit"
                   className="relative rounded-xl sm:rounded-2xl shadow-card w-full h-64 sm:h-80 md:h-96 object-cover"
                   style={{ filter: "brightness(1.1)" }}
                 />
@@ -603,19 +554,6 @@ const AboutPage = () => {
                       </div>
                     </motion.div>
                   ))}
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isTeamInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.8, delay: 1.0 }}
-                >
-                  {/* <Button
-      className="bg-gradient-to-r from-[#00b140] to-[#00b140]/80 hover:from-[#00b140] hover:to-[#00b140] text-white transition-all duration-300 w-full sm:w-auto"
-      size="lg"
-      onClick={handleContactClick}
-    >
-      Kontaktieren Sie uns
-    </Button> */}
                 </motion.div>
               </motion.div>
             </div>
