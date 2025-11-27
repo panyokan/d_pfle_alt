@@ -7,6 +7,8 @@ const SEO = ({
   description = "Professionelle und liebevolle Betreuung in Ihrem gewohnten Umfeld. Wir kommen zu Ihnen nach Hause.", 
   canonicalUrl = "https://www.dreieich-pflege.de",
   ogImage = "/hero-image.jpeg",
+  
+
   keywords = "Pflege, Hauskrankenpflege, Betreuung, Dreieich, Altenpflege, Pflegedienst"
 }) => {
   
