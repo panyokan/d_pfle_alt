@@ -15,7 +15,7 @@ const Home = () => {
         description="Professionelle und liebevolle Betreuung in Ihrem gewohnten Umfeld. Wir kommen zu Ihnen nach Hause."
         canonicalUrl="https://www.dreieich-pflege.de"
      
-  ogImage="https://www.dreieich-pflege.de/hero-image.jpeg"
+  ogImage="https://www.dreieich-pflege.de/logo.jpeg"
 
 
         keywords="Pflege, Hauskrankenpflege, Betreuung, Dreieich, Altenpflege, Pflegedienst"
